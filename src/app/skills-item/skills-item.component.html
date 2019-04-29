@@ -1,0 +1,18 @@
+<div fxLayout='column' class='mar-t-8 mar-l-16 mar-r-16'>
+  <div fxLayout='row'>
+    <h4 class='no-mar'>
+      {{skill.name}}
+    </h4>
+    <span fxFlex></span>
+    <h4 class='no-mar'>
+      {{skill.value}}%
+    </h4>
+  </div>
+
+  <div class='mar-t-4'>
+    <mat-progress-bar [value]='skill.value' mode='determinated'>
+
+    </mat-progress-bar>
+  </div>
+
+</div>

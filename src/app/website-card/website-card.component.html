@@ -1,0 +1,21 @@
+<mat-card class='no-pad mar-8 bb'>
+
+  <div fxLayout>
+    <div fxFlex></div>
+    <button mat-button class='mar-16' (click)='open()'>
+      <mat-card-title class='no-mar no-pad'>
+        {{project.name}}
+        <mat-icon>open_in_new</mat-icon>
+      </mat-card-title>
+    </button>
+
+  </div>
+  <hr>
+  <img class="md-ink-ripple center-crop h hov" ngClass.xs='h2' [src]="project.image" alt="">
+  <hr>
+  <h4 class='pad-16'>
+    {{project.description}}
+  </h4>
+
+
+</mat-card>

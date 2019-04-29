@@ -1,0 +1,24 @@
+<div class=''>
+
+  <h1 class='mar-l-32 mar-r-32 mar-t-32' fxLayout='column' fxLayoutAlign='center center'>
+    <mat-icon>school</mat-icon>
+    Certifications
+  </h1>
+
+  <mat-card *ngFor='let link of links' fxLayout='column' class='bl mar-8 wow fadeInLeft'>
+    <div fxLayout fxLayoutAlign='start center'>
+
+      <h2>
+        {{link.title}}
+      </h2>
+      <h4 class="mat-subheading1 mar-l-4 o">{{link.issuer}}</h4>
+    </div>
+
+    <button mat-button mat-flat-button color='primary' (click)="check(link.link)">
+      see certificate
+      <mat-icon>open_in_new</mat-icon>
+    </button>
+
+  </mat-card>
+
+</div>

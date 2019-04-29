@@ -1,0 +1,24 @@
+<div>
+
+  <h1 class='mar-l-32 mar-r-32 mar-t-32' fxLayout='column' fxLayoutAlign='center center'>
+    <mat-icon>school</mat-icon>
+    Education
+  </h1>
+
+  <mat-card *ngFor='let ed of eds' class='mar-32 bl wow fadeInLeft'>
+    <h4 class='no-mar-b '>{{ed.date}} </h4>
+
+    <p class='mar-t-8'>
+      <mat-chip-list>
+        <mat-chip color='primary' selected>
+          {{ed.institute}}
+        </mat-chip>
+      </mat-chip-list>
+    </p>
+    <h1 class='mar-t-8'>
+      {{ed.title}}
+    </h1>
+
+  </mat-card>
+
+</div>

@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; //purple-green.css
+@import '~@angular/material/theming';
+@include mat-core();
+$theme-primary: mat-palette($mat-deep-purple);
+$theme-accent: mat-palette($mat-deep-orange, A200, A100, A400);
+$theme-warn: mat-palette($mat-red);
+$theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+@mixin grab($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn); // Create theme specfic styles
+  .primary {
+    color: mat-color($primary);
+  }
+  .accent {
+    color: mat-color($accent);
+  }
+  .warn {
+    color: mat-color($warn);
+  }
+  .bg-primary {
+    background-color: mat-color($primary);
+  }
+  .bg-accent {
+    background-color: mat-color($accent);
+  }
+  .bg-warn {
+    background-color: mat-color($warn);
+  }
+}
+
+@include grab($theme);
+@include angular-material-theme($theme);
+.light {
+  $light-primary: mat-palette($mat-blue, 200, 300, 900);
+  $light-accent: mat-palette($mat-light-blue, 600, 100, 800);
+  $light-warn: mat-palette($mat-red, 600);
+  $light-theme: mat-dark-theme($light-primary, $light-accent, $light-warn);
+  @include grab($theme);
+  @include angular-material-theme($light-theme);
+}
+
+.bgg {
+  background: -webkit-linear-gradient(90deg, #efbad3, #a254f2);
+}

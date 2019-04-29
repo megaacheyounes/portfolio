@@ -1,0 +1,20 @@
+<mat-card class="mar-32 no-pad ">
+
+  <h1 class='pad-16 no-mar-b' fxLayout='column' fxLayoutAlign='center center'>
+    <mat-icon>mood</mat-icon>
+    hobbies/entertainment
+  </h1>
+
+
+  <div fxLayout='layout wrap'>
+    <div fxFlex='25%' fxFlex.sm='50%' fxFlex.xs='100%' *ngFor='let h of hs' class='no-mar bb' style.background-image="url('{{h.bg}}') ">
+      <div class='{{h.color}} o  pad-32' fxLayout='column' fxLayoutAlign='center center'>
+
+        <mat-icon class='t'>{{h.icon}} </mat-icon>
+        <h2 class='t'>{{h.name}} </h2>
+
+      </div>
+    </div>
+  </div>
+
+</mat-card>
