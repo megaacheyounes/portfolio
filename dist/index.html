@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Megaache Younes | personal website</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?d=1425">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123043456-1"></script>
+  <style>
+    .fh {
+      height: 100vh !important;
+      text-align: center;
+      width: 100% !important;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spinner {
+      margin: auto;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      text-align: center;
+
+      -webkit-animation: sk-rotate 2.0s infinite linear;
+      animation: sk-rotate 2.0s infinite linear;
+    }
+
+    .dot1,
+    .dot2 {
+      width: 60%;
+      height: 60%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      background-color: purple;
+      border-radius: 100%;
+
+      -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+      animation: sk-bounce 2.0s infinite ease-in-out;
+    }
+
+    .dot2 {
+      top: auto;
+      bottom: 0;
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes sk-rotate {
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @keyframes sk-rotate {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @-webkit-keyframes sk-bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0.0)
+      }
+
+      50% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    @keyframes sk-bounce {
+
+      0%,
+      100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      }
+
+      50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+      }
+    }
+
+  </style>
+<link rel="stylesheet" href="styles.ea0bc51a2fbe6ab788bc.css"></head>
+
+<body class="mat-typography full-height no-pad no-mar bg ">
+
+  <app-root>
+    <div class=' fh'>
+      <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+  </app-root>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123043456-1');
+
+  </script>
+
+<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.f6ae3e8b63939c618130.js"></script><script type="text/javascript" src="scripts.381e7b1bf7e25c11acee.js"></script><script type="text/javascript" src="main.3823c1e8b7ed80a776b3.js"></script></body>
+
+</html>
