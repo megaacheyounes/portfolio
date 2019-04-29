@@ -1,7 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Project } from '../project';
-import { ObservableMedia, MediaChange } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
 declare var $: any;
 
 @Component({
