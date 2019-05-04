@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     let j = 2;
     for (let i = 0; i < 10; i++) {
       j *= j * 2;
-      const a = '.p-u-' + j + '{ poistion: absolute; top: -' + j + 'px; }';
+      const a = '.p-u-' + j + '{ position: absolute; top: -' + j + 'px; }';
       console.log(a);
 
     }

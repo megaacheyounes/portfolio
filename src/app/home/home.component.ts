@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     },
   ];
 
-  version = '2.1  4/2019';
+  version = '2.2  5/2019';
 
   constructor() { }
 

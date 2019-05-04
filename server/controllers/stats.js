@@ -9,9 +9,9 @@ let loadStats = async (req, res) => {
 
   await mongoose.connect(url);
 
-  let secret = req.bodyString('secret');
+  let secret = req.queryString('secret');
 
-  if (secret !== process.env.PORTFOLIO_SECRET && secret !== 'theSecret')
+  if (secret !== 'Pink700$$')
     return res.status(403).end('You are not welcome here.');
 
   let stats = await Stat.find().sort('-date').exec();

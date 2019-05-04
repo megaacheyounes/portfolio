@@ -1,16 +1,17 @@
 {
   "name": "portfolio",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Megaache younes",
   "homepage": "megaache-younes.herokuapp.com",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --prod",
+    "build": "ng build --prod --stats-json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod  && git add . && git commit -m '.' && git push heroku master"
+    "deploy": "ng build --prod  && git add . && git commit -m '.' && git push heroku master",
+    "stats": "webpack-bundle-analyzer dist/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -69,7 +70,8 @@
     "protractor": "^5.4.1",
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "engines": {
     "node": "8.9.0"
