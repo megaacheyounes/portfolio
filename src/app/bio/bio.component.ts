@@ -47,7 +47,7 @@ export class BioComponent implements OnInit {
 
   url = /* 'http://localhost:3000' +  */'/cv';
 
-  @ViewChild('statsForm') statsForm;
+  @ViewChild('statsForm', { static: true }) statsForm;
 
   constructor() { }
 

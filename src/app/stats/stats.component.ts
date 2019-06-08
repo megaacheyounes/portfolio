@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
+
 import { Stat } from '../stat';
 import { isArray } from 'util';
 import { MatTableDataSource } from '@angular/material';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-stats',
@@ -16,7 +18,7 @@ export class StatsComponent implements OnInit {
   stats: Stat[];
   statsColumns: String[] = ['date', 'ip', 'method', 'language', 'device', 'location', 'os', 'browser'];
   error;
-  @ViewChild('paginator') paginator;
+  // @ViewChild('paginator') paginator;
 
   dataSource;
   constructor(private http: HttpClient) {
@@ -32,7 +34,7 @@ export class StatsComponent implements OnInit {
     console.log('secret', this.secret);
     this.http.post(url, { secret: this.secret }).subscribe((data: Stat[]) => {
       this.dataSource = new MatTableDataSource<Stat>(data);
-      this.dataSource.paginator = this.paginator;
+      // this.dataSource.paginator = this.paginator;
     }, err => {
       this.error = err.error;
       console.log('err', err);
