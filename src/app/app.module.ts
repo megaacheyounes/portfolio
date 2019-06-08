@@ -53,6 +53,7 @@ import { StatsComponent } from './stats/stats.component';
 import { FormatDatePipe } from './format-date.pipe';
 import { FormatLanguagePipe } from './format-language.pipe';
 import { ExperiencesComponent } from './experiences/experiences.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -84,6 +85,7 @@ import { ExperiencesComponent } from './experiences/experiences.component';
     ExperiencesComponent
   ],
   imports: [
+    CommonModule,
     DragScrollModule,
     MatSidenavModule,
     MatInputModule,
