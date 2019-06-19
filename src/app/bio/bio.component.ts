@@ -52,10 +52,6 @@ export class BioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-  }
-
-  showCV() {
     if (navigator.geolocation) {
 
       navigator.geolocation.getCurrentPosition(position => {
@@ -64,12 +60,23 @@ export class BioComponent implements OnInit {
       });
     }
 
+    try {
 
-    const connection = navigator['connection'] || navigator['mozConnection'] || navigator['webkitConnection'];
+      const connection = navigator ? (navigator['connection'] || navigator['mozConnection'] || navigator['webkitConnection']) : 'unknown';
 
-    this.statsForm.nativeElement.nt.value = connection.type;
+      this.statsForm.nativeElement.nt.value = connection.type;
+    } catch (e) {
 
-    this.statsForm.nativeElement.submit();
+    }
+
+  }
+
+  showCV() {
+    try {
+      this.statsForm.nativeElement.submit();
+    } catch (e) {
+      window.open(this.url, '_blank');
+    }
 
   }
 

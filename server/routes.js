@@ -8,7 +8,6 @@ const messageController = require('./controllers/contact');
 
 const router = require('express').Router();
 
-
 router.route('/robots.txt', robotsController.showRobotsFile);
 router.route('/cv').get(cvController.showCV).post(cvController.showCV);
 router.route('/sitemap.xml').get(sitemapController.showSitemap);
