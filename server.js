@@ -8,10 +8,16 @@ const cors = require('cors')
 const helmet = require('helmet')
 const sanitize = require('sanitize')
 const routes = require('./server/routes');
+var compression = require('compression')
 
+
+
+
+// compress all responses
 //should be removed on production version
 app.use(cors());
 
+app.use(compression());
 
 app.use(sanitize.middleware)
 /** /security */
