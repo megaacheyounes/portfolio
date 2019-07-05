@@ -65,7 +65,9 @@ app.use('/', routes);
 });
 */
 // Angular DIST output folder
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist'), {
+  maxAge: 86400000
+}));
 // Send all other requests to the Angular app
 
 //Set Port
