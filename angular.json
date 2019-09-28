@@ -39,7 +39,7 @@
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bxslider/dist/jquery.bxslider.min.js",
               "./node_modules/slick-carousel/slick/slick.min.js",
-              "./node_modules/wowjs/dist/wow.js"
+              "./node_modules/scrollreveal/dist/scrollreveal.min.js"
             ]
           },
           "configurations": {

@@ -1,0 +1,24 @@
+.h {
+  height: 350px;
+}
+
+.h2 {
+  height: 250px !important;
+}
+
+.bb:hover {
+  transform: translateY(-5px);
+  filter: saturate(105%) brightness(105%);
+}
+
+.bb {
+  transition: all 500ms ease-out;
+}
+
+.hov {
+  transition: all 500ms ease-out;
+}
+
+.hov:hover {
+  filter: saturate(110%) brightness(110%);
+}

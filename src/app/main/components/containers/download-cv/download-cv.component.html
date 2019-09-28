@@ -1,0 +1,25 @@
+ <div [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'" #section class="mar-32 no-pad   ">
+
+   <app-title icon='cloud_download' title='download resume/cv' margins='true' marginTop='true'></app-title>
+   <div class='reveal'>
+
+     <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap.gt-xs="16px" class='mar-t-16 pad-b-32  '>
+
+       <a (click)="showCV(softwareEngineer)" fxFlex.xs='100%' class=" mar-t-16  " mat-raised-button color='primary'>
+         <mat-icon class='pad-8'>build</mat-icon>
+         As Software Engineer
+       </a>
+
+       <a (click)="showCV(web)" class=" mar-t-16  " fxFlex.xs='100%' mat-raised-button color='warn'>
+         <mat-icon class='pad-8'>public</mat-icon>
+         As Web Developer
+       </a>
+
+       <a (click)="showCV(android)" class=" mar-t-16  greenBg " fxFlex.xs='100%' mat-raised-button color='warn'>
+         <mat-icon class='pad-8'>android</mat-icon>
+         As Android Developer
+       </a>
+
+     </div>
+   </div>
+ </div>

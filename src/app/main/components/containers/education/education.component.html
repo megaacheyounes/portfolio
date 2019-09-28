@@ -1,0 +1,23 @@
+<div class=' '>
+
+  <app-title icon='school' title='Education' margins='true'> </app-title>
+
+
+
+  <mat-card *ngFor='let ed of eds' [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'" class='mar-32 reveal bl'>
+    <h4 class='no-mar-b '>{{ed.date}} </h4>
+
+    <p class='mar-t-8'>
+      <mat-chip-list>
+        <mat-chip color='primary' selected>
+          {{ed.institute}}
+        </mat-chip>
+      </mat-chip-list>
+    </p>
+    <h1 class='mar-t-8'>
+      {{ed.title}}
+    </h1>
+
+  </mat-card>
+
+</div>

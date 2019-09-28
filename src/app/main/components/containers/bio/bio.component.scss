@@ -1,0 +1,45 @@
+.pull-up {
+  position: relative;
+  top: -64px;
+}
+
+.cv {
+  position: relative;
+  bottom: -32px;
+}
+
+.pull-up-64 {
+  position: relative;
+  top: -64px;
+}
+
+.bg-li {
+  background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+  color: white;
+}
+
+.bg-cc {
+  background-image: url(src/assets/cc.jpg), linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+  background-image: url(src/assets/cc.jpg), -webkit-linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+  background-image: url(src/assets/cc.jpg), -moz-linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+  background-image: url(src/assets/cc.jpg), -o-linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
+
+.ccc {
+  background: rgba($color: #ffffff, $alpha: 0.8);
+}
+
+.wbg {
+  // background: #ffffffaf;
+}
+
+.codewars {
+  background: #313131;
+
+  img {
+    width: 300px !important;
+  }
+}

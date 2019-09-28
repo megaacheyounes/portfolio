@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var WOW: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +10,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    new WOW().init();
   }
 
   a() {

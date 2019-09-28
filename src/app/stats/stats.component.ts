@@ -1,10 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-
-
-import { Stat } from '../stat';
-import { isArray } from 'util';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
+import { Stat } from '../main/models/stat';
 
 @Component({
   selector: 'app-stats',

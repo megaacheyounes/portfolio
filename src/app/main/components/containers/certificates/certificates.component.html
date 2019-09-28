@@ -1,0 +1,24 @@
+<div class=' '>
+
+  <app-title title='Certifications' icon='school' margins='true'></app-title>
+
+  <mat-card *ngFor='let link of links' [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'" fxLayout='column'
+    class='bl reveal mar-8  '>
+    <div fxLayout fxLayoutAlign='start center'>
+
+      <h2>
+        {{link.title}}
+      </h2>
+      <h4 class="mat-subheading1 mar-l-4 o">{{link.issuer}}</h4>
+    </div>
+    <div>
+
+      <button mat-button mat-flat-button color='primary' (click)="check(link.link)">
+        see certificate
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </div>
+
+  </mat-card>
+
+</div>

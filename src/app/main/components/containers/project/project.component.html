@@ -1,0 +1,51 @@
+<div class='no-scroll'>
+
+  <app-title icon='work' title='Projects' margins="true"></app-title>
+
+
+
+  <div class='bg-ws  '>
+
+    <div [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'" class=' pad-b-32 reveal'>
+
+      <h1 fxFlexFill class='h pad-16 mat-display-1' fxLayoutAlign='center center'>
+        <mat-icon>public </mat-icon>
+        Websites
+      </h1>
+
+      <div>
+
+        <div class='a '>
+
+          <app-website-card *ngFor='let website of websites' [project]='website'>
+          </app-website-card>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class='bg-aa   '>
+
+    <div [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'" class=' pad-b-32 reveal'>
+
+      <h1 fxFlexFill class='h pad-16 mat-display-1' fxLayoutAlign='center center'>
+        <mat-icon>android </mat-icon>
+        android apps
+      </h1>
+
+      <div>
+        <div class=" b">
+
+          <app-app-card class='mar-l-32  ' *ngFor='let app of apps' [project]='app'>
+          </app-app-card>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

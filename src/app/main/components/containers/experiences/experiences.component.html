@@ -1,0 +1,44 @@
+<div class=' '>
+
+  <app-title icon='work' title='Experience' margins="true"></app-title>
+
+
+
+  <mat-card *ngFor='let exp of exps' [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'" class='mar-32 bl  reveal'>
+
+    <a *ngIf='exp.companyLogo' target='_blank' class='top-right  ' [href]="exp.website">
+      <img [src]="exp.companyLogo" class='w-128 reveal ' alt="">
+    </a>
+
+    <h4 class='no-mar-b reveal'>{{exp.start + ' - ' + exp.end + ' (' + exp.duration + ')'}} </h4>
+
+    <p class='mar-t-8  '>
+      <mat-chip-list>
+        <a [href]="exp.website" target='_blank'>
+          <mat-chip color='primary' selected class='reveal'>
+            {{exp.company}}
+          </mat-chip>
+        </a>
+      </mat-chip-list>
+    </p>
+
+    <h1 class=' reveal mar-t-8'>
+      {{exp.title}}
+    </h1>
+
+    <h3 class='reveal'>Experiences:</h3>
+    <p *ngFor='let experience of exp.experiences' class='reveal'>
+      {{experience}}
+    </p>
+
+    <h3 class='reveal'>Technologies:</h3>
+    <mat-chip-list>
+      <mat-chip color='secondary' *ngFor='let tec of exp.technologies' class='reveal'>
+        {{tec}}
+      </mat-chip>
+    </mat-chip-list>
+
+
+  </mat-card>
+
+</div>

@@ -1,20 +1,18 @@
-let mongoose = require('mongoose');
-let useragent = require('useragent');
-let Stat = require('../models/stat');
-var geocoding = require('reverse-geocoding');
-
-let url = process.env.MONGODB_URL || 'mongodb://megaache:Pink700fuk@ds115094.mlab.com:15094/portfolio';
+const useragent = require('useragent');
+const Stat = require('../models/stat');
+const geocoding = require('reverse-geocoding');
+const dbService = require('../services/dbService');
 
 let loadStats = async (req, res) => {
 
-  await mongoose.connect(url);
+  await dbService.connect();
 
   let secret = req.queryString('secret');
 
   if (secret !== 'Pink700$$')
     return res.status(403).end('You are not welcome here.');
 
-  let stats = await Stat.find().sort('-date').exec();
+  let stats = await dbService.getStats();
 
   res.json(stats);
 }
@@ -36,14 +34,13 @@ let reverseGeocode = async (lat, lon) => {
     //return result.coutnry + ','  + result.locality + ',' + result.sublocality;
   })
 
-
 }
 
 
 let registerStat = async (req) => {
-  await mongoose.connect(url);
+  await dbService.connect();
 
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
 
     console.log('register stat');
     useragent(true); //keeps useragent up to date with future useragent updates
@@ -77,11 +74,8 @@ let registerStat = async (req) => {
       method
     });
     console.log('stat', stat);
-    stat.save((err, doc) => {
-      console.log('err, doc', err, doc);
-      resolve();
-    });
-
+    await dbService.saveStats(stat);
+    resolve();
   })
 }
 
