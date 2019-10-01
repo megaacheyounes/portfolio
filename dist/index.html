@@ -13,6 +13,89 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123043456-1"></script>
 
+  <style>
+    .fh {
+      height: 100vh !important;
+      text-align: center;
+      width: 100% !important;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spinner {
+      margin: auto;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      text-align: center;
+
+      -webkit-animation: sk-rotate 2.0s infinite linear;
+      animation: sk-rotate 2.0s infinite linear;
+    }
+
+    .dot1,
+    .dot2 {
+      width: 60%;
+      height: 60%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      background-color: purple;
+      border-radius: 100%;
+
+      -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+      animation: sk-bounce 2.0s infinite ease-in-out;
+    }
+
+    .dot2 {
+      top: auto;
+      bottom: 0;
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes sk-rotate {
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @keyframes sk-rotate {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @-webkit-keyframes sk-bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0.0)
+      }
+
+      50% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    @keyframes sk-bounce {
+
+      0%,
+      100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      }
+
+      50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+      }
+    }
+
+  </style>
+
 <link rel="stylesheet" href="styles.6a9bb52ec5e2394e4f6f.css"></head>
 
 <body class="mat-typography full-height no-pad no-mar bg ">
@@ -36,6 +119,6 @@
 
   </script>
 
-<script src="runtime-es2015.d967aad489a058b0a42f.js" type="module"></script><script src="polyfills-es2015.18342a4cab4d87994595.js" type="module"></script><script src="runtime-es5.d3eefbb097aad24861d6.js" nomodule></script><script src="polyfills-es5.004191eabe616562edb6.js" nomodule></script><script src="scripts.0f2b4bc93a9eb48c510a.js"></script><script src="main-es2015.8cc2da3710b494eb18c0.js" type="module"></script><script src="main-es5.909ad68a21db28e8e401.js" nomodule></script></body>
+<script src="runtime-es2015.47ffe748b9cdcc6fd4ae.js" type="module"></script><script src="polyfills-es2015.18342a4cab4d87994595.js" type="module"></script><script src="runtime-es5.069c4d006d2f4c480ab8.js" nomodule></script><script src="polyfills-es5.004191eabe616562edb6.js" nomodule></script><script src="scripts.0f2b4bc93a9eb48c510a.js"></script><script src="main-es2015.8cc2da3710b494eb18c0.js" type="module"></script><script src="main-es5.909ad68a21db28e8e401.js" nomodule></script></body>
 
 </html>
