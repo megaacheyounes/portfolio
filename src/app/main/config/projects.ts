@@ -3,7 +3,7 @@ import { Project } from '../models/project';
 export const WEBSITES: Project[] = [
     {
         name: 'Algebratec technologies',
-        description: 'The Official business website of Algebrtec SARL.',
+        description: 'The Official business website of Algebrtec Technologies.',
         image: 'assets/websites/al.JPG',
         link: '#Algebratec$'.replace('#', 'http://').replace('$', '.com')
     },
