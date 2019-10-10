@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+/files/*.cv.pdf
+/src/assets/cc.jpg
+/src/assets/avatar.jpg
 
 # compiled output
 /dist
