@@ -31,8 +31,7 @@
               "src/general.scss",
               "./node_modules/slick-carousel/slick/slick.css",
               "./node_modules/slick-carousel/slick/slick-theme.css",
-              "./node_modules/bxslider/dist/jquery.bxslider.css",
-              "./node_modules/animate.css/animate.min.css"
+              "./node_modules/bxslider/dist/jquery.bxslider.css"
 
             ],
             "scripts": [

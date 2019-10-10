@@ -52,3 +52,15 @@
     width: 300px !important;
   }
 }
+
+.bg-git {
+  background-image: linear-gradient(135deg, #515151 10%, #212121 100%);
+  color: white;
+
+  img {
+    filter: brightness(1000);
+    height: 24px;
+
+  }
+
+}
