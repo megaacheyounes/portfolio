@@ -3,7 +3,7 @@ export const BIRTHDAY = '1997-06-18';
 
 const age = () => {
     return Math.floor((new Date().getTime() - Date.parse(BIRTHDAY)) / MILLIS_IN_A_YEAR);
-}
+};
 
 export const PERSONAL_INFORMATION = [
     {
@@ -20,7 +20,7 @@ export const PERSONAL_INFORMATION = [
     },
     {
         icon: 'assets/location-web.png',
-        value: '45 40b Street Al Muraqqabat, Dubai, UAE'
+        value: '45 40b St, Deira, Dubai, UAE'
     },
     {
         icon: 'assets/mail-web.png',
@@ -28,6 +28,7 @@ export const PERSONAL_INFORMATION = [
     },
     {
         icon: 'assets/phone-web.png',
-        value: '(+971) 55 #'.replace('#', '704 0589')
+        value: '(+9' + '71) 55 #'.replace('#', '704 0589')
     }
-]; 
+];
+

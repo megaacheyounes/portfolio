@@ -6,9 +6,9 @@ export const EXPERIENCES = [
         end: PRESENT,
         title: 'Full stack web developer (spare time job)',
         company: 'Algebratec',
-        companyLogo: 'http://www.algebratec.com/img/algtec/logo_dark.png',
+        companyLogo: 'ht' + 'tp://www.' + 'algebratec' + '.com/img/algtec/logo_dark.png',
         workplace: 'Ali Mendjli, Constantine Algeria',
-        website: 'http://www.algebratec.com',
+        website: 'htt' + 'p://www.' + 'algebratec' + '.com',
 
         technologies: ['Laravel/Lumen', 'Angular', 'nodejs', 'jQuery', 'Swagger-ui', 'Angular Material',
             'Bootstrap', 'Animate.css', 'nativescript', 'react', 'Laravel/passport', 'git'],
