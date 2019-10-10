@@ -1,3 +1,5 @@
+const fieldRequired = (field, res) => res.status(400).json(`'${field}' is missing!`);
+
 let sendMessage = (req, res) => {
   if (!req.body.message && !req.body.email) {
     res.status(400);
@@ -9,6 +11,19 @@ let sendMessage = (req, res) => {
   email = req.bodyString('email');
   subject = req.bodyString('subject');
   message = req.bodyString('message');
+
+  const requiredFields = {
+    name,
+    email,
+    subject,
+    message
+  };
+
+  for (let key in requiredFields)
+    if (!requiredFields[key]) {
+      return fieldRequired(key, res);
+    }
+
 
   email = {
     from: email,

@@ -15,7 +15,7 @@ const getStats = () => {
 const saveStats = stat => {
   new Promise((resolve, reject) => {
     stat.save((err, doc) => {
-      console.log('err, doc', err, doc);
+      //    console.log('err, doc', err, doc);
       resolve();
     });
   });
