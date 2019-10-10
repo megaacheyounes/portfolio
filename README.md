@@ -1,5 +1,5 @@
 # [Personal website](http://megaache-younes.herokuapp.com)
-My personal website/online resume built base on the MEAN stack.
+My personal website/online resume built based on the MEAN stack.
 
 ## Env
 copy .env.example and rename it to .env, then add your own information
@@ -10,7 +10,7 @@ Information like education, experiences... can be found in the config files at s
 ## Tests 
 `npm test`
 
-#### Resumes and ome assets (avatar/sidebar background) were not uploaded
+#### Resumes and some assets (avatar/sidebar background) were not uploaded
 
 ## License
 ```
