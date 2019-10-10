@@ -42,7 +42,7 @@ let registerStat = async (req) => {
 
   return new Promise(async (resolve, reject) => {
 
-    console.log('register stat');
+    //  console.log('register stat');
     useragent(true); //keeps useragent up to date with future useragent updates
     let ua = useragent.parse(req.header('user-agent'));
 
@@ -73,7 +73,7 @@ let registerStat = async (req) => {
       device,
       method
     });
-    console.log('stat', stat);
+    // console.log('stat', stat);
     await dbService.saveStats(stat);
     resolve();
   })

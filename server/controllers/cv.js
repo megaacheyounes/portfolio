@@ -8,6 +8,7 @@ let showCV = async (req, res) => {
   const cvName = type => `YounesMegaache.${type}.cv.pdf`;
   res.sendFile(path.join(__dirname, '../../files/' + cvName(type)));
 }
+
 module.exports = {
   showCV
 };

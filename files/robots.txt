@@ -1,1 +1,1 @@
-Sitemap: megaache-younes.herokuapp.com/sitemap.xml
+Sitemap: http://megaache-younes.herokuapp.com/sitemap.xml
