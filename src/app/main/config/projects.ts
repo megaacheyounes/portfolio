@@ -35,6 +35,13 @@ export const WEBSITES: Project[] = [
 
 export const APPS: Project[] = [
     {
+        name: 'eSouq',
+        description: `eSouq is an online marketplace that uses GPS to help you find
+        great deals or let you sell your goods to nearby people quickly.`,
+        image: 'assets/android/esouq.jpg',
+        link: 'https://play.google.com/store/apps/details?id=com.esouq.app'
+    },
+    {
         name: 'Golden Souq',
         description: `Quickly sell things you list on Golden souq and find great deals nearby.
       Electronics, games, clothes, cars, furniture, décor and much more.`,
