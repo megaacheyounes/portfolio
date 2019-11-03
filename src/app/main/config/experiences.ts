@@ -4,7 +4,7 @@ export const EXPERIENCES = [
     {
         start: '11/2018',
         end: PRESENT,
-        title: 'Full stack web developer (spare time job)',
+        title: 'Full stack web developer',
         company: 'Algebratec',
         companyLogo: 'ht' + 'tp://www.' + 'algebratec' + '.com/img/algtec/logo_dark.png',
         workplace: 'Ali Mendjli, Constantine Algeria',
