@@ -19,7 +19,7 @@ export const EXPERIENCES = [
 
             '  I wrote scripts with nodejs that helped to share code between our angular projects.',
 
-            ' I created a web scrapper with GouttePhp to collect hotel prices from different booking website for analytical purposes',
+            ' I created a web scrapper with Goutte/Php to collect hotel prices from different booking website for analytical purposes',
 
             '  I created a documentation page for our hotel booking api with swagger-ui.',
 

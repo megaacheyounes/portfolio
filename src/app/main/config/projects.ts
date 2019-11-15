@@ -17,19 +17,19 @@ export const WEBSITES: Project[] = [
         name: 'Hot headlines',
         description: 'news website that shows news from most popular news websites',
         image: 'assets/websites/hh.JPG',
-        link: '#hotheadlines.' + 'herokuapp$'.replace('#', 'http://').replace('$', '.com')
+        link: ('#hotheadlines.' + 'herokuapp$').replace('#', 'http://').replace('$', '.com')
     },
     {
         name: 'youtube downloader',
         description: 'download and covert youtube videos and playlists',
         image: 'assets/websites/yq.JPG',
-        link: '#youtubequeue.' + 'herokuapp$'.replace('#', 'http://').replace('$', '.com')
+        link: ('#youtubequeue.' + 'herokuapp$').replace('#', 'http://').replace('$', '.com')
     },
     {
         name: 'fitGirl repacks',
         description: 'advanced search and filtering tool for fitGirl\'s repacks (pc games)',
         image: 'assets/websites/fg.JPG',
-        link: '#fitgirl-repacks.' + 'herokuapp$'.replace('#', 'http://').replace('$', '.com')
+        link: ('#fitgirl-repacks.' + 'herokuapp$').replace('#', 'http://').replace('$', '.com')
     }
 ];
 
