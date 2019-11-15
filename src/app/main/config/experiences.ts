@@ -6,7 +6,7 @@ export const EXPERIENCES = [
         end: PRESENT,
         title: 'Full stack web developer',
         company: 'Algebratec',
-        companyLogo: 'ht' + 'tp://www.' + 'algebratec' + '.com/img/algtec/logo_dark.png',
+        companyLogo: 'ht' + 'tp://www.' + 'algebratec' + '.com/wp-content/uploads/2019/08/algebratec_logo_full-1024x336.png',
         workplace: 'Ali Mendjli, Constantine Algeria',
         website: 'htt' + 'p://www.' + 'algebratec' + '.com',
 

@@ -9,6 +9,9 @@ export const PERSONAL_INFORMATION = [
     {
         icon: 'assets/nopp-web.png',
         value: 'Younes Megaache'
+    }, {
+        icon: 'assets/nopp-web.png',
+        value: 'Full Stack Web Developer'
     },
     {
         icon: 'assets/cake.png',
