@@ -24,6 +24,30 @@ export const EXPERIENCES = [
             '  I created a documentation page for our hotel booking api with swagger-ui.',
 
             '   I used GIT for versioning, and Trello to manage our projects and organize the workflow.',
+        ],
+        achievements: [
+            {
+                title: 'Algebratec',
+                url: 'htt' + 'p://www.' + 'algebratec' + '.com'
+            },
+            {
+                title: 'Hotel demo',
+                url: 'ht' + 'tp://' + 'demo.hotel.algebratec' + '.com'
+            }, {
+                title: 'Trip online',
+                url: 'ht' + 'tp://' + 'triponline' + '.pro'
+            }, {
+                title: 'Express Holiday',
+                url: 'ht' + 'tp://' + 'expressholiday' + '.pro'
+            },
+            {
+                title: '123Booking',
+                url: 'ht' + 'tp://' + '123booking' + '.pro'
+            },
+            {
+                title: 'Best Resa',
+                url: 'ht' + 'tp://' + 'bestresa' + '.com'
+            }
         ]
 
     }
