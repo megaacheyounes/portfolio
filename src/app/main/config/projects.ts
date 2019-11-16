@@ -1,12 +1,12 @@
 import { Project } from '../models/project';
 
 export const WEBSITES: Project[] = [
-    {
+    /* {
         name: 'Algebratec technologies',
         description: 'The Official business website of Algebrtec Technologies.',
         image: 'assets/websites/al.JPG',
         link: '#Algebratec$'.replace('#', 'http://').replace('$', '.com')
-    },
+    }, */
     {
         name: 'Zedeal Store',
         description: 'An ecommerce website built with wordpress and woocommerce',
