@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const DATABASE_URL = process.env.MONGODB_URL || 'mongodb://megaache:Pink700fuk@ds115094.mlab.com:15094/portfolio';
+const DATABASE_URL = process.env.MONGODB_URL ;
 
 const connect = () => {
   return mongoose.connect(DATABASE_URL, {
