@@ -9,10 +9,18 @@ let loadStats = async (req, res) => {
 
   let secret = req.queryString('secret');
 
-  if (secret !== 'Pink700$$')
+  if (secret !== 'nopass')
     return res.status(403).end('You are not welcome here.');
 
-  let stats = await dbService.getStats();
+  try {
+
+    var stats = await dbService.getStats();
+  } catch (err) {
+    res.json({
+      err
+    })
+  }
+
 
   res.json(stats);
 }
@@ -38,6 +46,8 @@ let reverseGeocode = async (lat, lon) => {
 
 
 let registerStat = async (req) => {
+  if (req.url && req.url.indexOf('stats') !== -1)
+    return;
   await dbService.connect();
 
   return new Promise(async (resolve, reject) => {
@@ -59,6 +69,7 @@ let registerStat = async (req) => {
     let ip = req.connection.remoteAddress;
     let language = req.header('accept-language');
     let method = req.method;
+    let route = req.url;
     let date = new Date();
     let stat = new Stat({
       ip,
@@ -71,7 +82,8 @@ let registerStat = async (req) => {
       network_type,
       os,
       device,
-      method
+      method,
+      route
     });
     // console.log('stat', stat);
     await dbService.saveStats(stat);

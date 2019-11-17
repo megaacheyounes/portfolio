@@ -12,6 +12,7 @@ let statSchema = new mongoose.Schema({
   lon: Number,
   location: String,
   method: String,
+  route: String
 });
 
 module.exports = mongoose.model('stat', statSchema);

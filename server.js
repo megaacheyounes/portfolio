@@ -9,8 +9,8 @@ const helmet = require('helmet')
 const sanitize = require('sanitize')
 const routes = require('./server/routes');
 var compression = require('compression')
-
-
+const statsController = require('./server/controllers/stats');
+const r = require('dotenv').config();
 
 
 // compress all responses
@@ -58,12 +58,20 @@ watcher.on('ready', function () {
   })
 }) */
 var fs = require('fs');
-app.use('/', routes);
 
 /*app.get('*',(req, res) => {
   res.sendFile(path.join(__dirname, './dist/index.html'));
 });
 */
+
+app.use(async (req, res, next) => {
+
+  await statsController.registerStat(req);
+  next();
+});
+
+app.use('/', routes);
+
 // Angular DIST output folder
 app.use(express.static(path.join(__dirname, 'dist'), {
   maxAge: 86400000
@@ -73,6 +81,7 @@ app.use(express.static(path.join(__dirname, 'dist'), {
 //Set Port
 const port = process.env.PORT || '3000';
 app.set('port', port);
+
 
 const server = http.createServer(app);
 

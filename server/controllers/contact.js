@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const fieldRequired = (field, res) => res.status(400).json(`'${field}' is missing!`);
 
 let sendMessage = (req, res) => {
@@ -41,7 +43,8 @@ const sgMail = require('@sendgrid/mail');
 
 function sendMail(req, res, email) {
   //smtp-relay.gmail.com
-  let apiKey = process.env.SENDGRID_API_KEY;
+  let apiKey = process.env.PORTFOLIO_SENDGRID_API_KEY;
+
   sgMail.setApiKey(apiKey);
 
   sgMail.send(email, false, (err, result) => {
