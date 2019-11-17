@@ -43,7 +43,8 @@ const sgMail = require('@sendgrid/mail');
 
 function sendMail(req, res, email) {
   //smtp-relay.gmail.com
-  let apiKey = process.env.PORTFOLIO_SENDGRID_API_KEY;
+  //let apiKey = process.env.PORTFOLIO_SENDGRID_API_KEY;
+  let apiKey = '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';
 
   sgMail.setApiKey(apiKey);
 
