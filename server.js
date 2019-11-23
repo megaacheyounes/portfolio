@@ -85,11 +85,11 @@ app.use('/', routes);
 
 // Send all other requests to the Angular app
 
-app.get('/dashboard', (req, res) => {
+/* app.get('/dashboard', (req, res) => {
   res.sendFile(path.join(__dirname, './dist/index.html'));
 });
 
-
+ */
 
 // Angular DIST output folder
 app.use(express.static(path.join(__dirname, 'dist'), {
