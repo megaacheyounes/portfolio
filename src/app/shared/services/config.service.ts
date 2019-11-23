@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { BIRTHDAY, PERSONAL_INFORMATION } from '../config/info';
-import { EDUCATION } from '../config/education';
-import { EXPERIENCES, PRESENT } from '../config/experiences';
-import { SKILLS, ADDITIONAL_SKILLS } from '../config/skills';
-import { WEBSITES, APPS } from '../config/projects';
-import { CERTIFICATES } from '../config/certificates';
-import { INTERESTS } from '../config/interests';
+import { BIRTHDAY, PERSONAL_INFORMATION } from '../../main/config/info';
+import { EDUCATION } from '../../main/config/education';
+import { EXPERIENCES, PRESENT } from '../../main/config/experiences';
+import { SKILLS, ADDITIONAL_SKILLS } from '../../main/config/skills';
+import { WEBSITES, APPS } from '../../main/config/projects';
+import { CERTIFICATES } from '../../main/config/certificates';
+import { INTERESTS } from '../../main/config/interests';
 
 
 @Injectable({
@@ -80,7 +80,7 @@ export class ConfigService {
       m -= y * 12;
     }
 
-    return   (y > 0 ? `${y} y ` : '') + `${m} mo`;
+    return (y > 0 ? `${y} y ` : '') + `${m} mo`;
   }
 
 

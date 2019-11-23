@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   }
 
   get version() {
-    return '3.2  11/2019';
+    return '4.1  11/2019';
   }
 
 }

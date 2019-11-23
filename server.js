@@ -9,7 +9,9 @@ const helmet = require('helmet')
 const sanitize = require('sanitize')
 const routes = require('./server/routes');
 var compression = require('compression')
+const validator = require('express-validator');
 const statsController = require('./server/controllers/stats');
+
 const r = require('dotenv').config();
 
 
@@ -18,6 +20,7 @@ const r = require('dotenv').config();
 app.use(cors());
 
 app.use(compression());
+
 
 app.use(sanitize.middleware)
 /** /security */
@@ -46,6 +49,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+
+//app.use(validator());
+
 //load server on fileChange just like nodeman
 /* var watcher = chokidar.watch('./server')
 
@@ -59,14 +65,12 @@ watcher.on('ready', function () {
 }) */
 var fs = require('fs');
 
-/*app.get('*',(req, res) => {
-  res.sendFile(path.join(__dirname, './dist/index.html'));
-});
-*/
 
 app.use(async (req, res, next) => {
+  if (!req.url.includes('assets')) {
 
-  await statsController.registerStat(req);
+    await statsController.registerStat(req);
+  }
   next();
 });
 
@@ -76,7 +80,12 @@ app.use('/', routes);
 app.use(express.static(path.join(__dirname, 'dist'), {
   maxAge: 86400000
 }));
+
 // Send all other requests to the Angular app
+app.get('/dashboard', (req, res) => {
+  res.sendFile(path.join(__dirname, './dist/index.html'));
+});
+
 
 //Set Port
 const port = process.env.PORT || '3000';

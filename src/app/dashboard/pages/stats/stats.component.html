@@ -1,0 +1,46 @@
+<mat-drawer-container fxFlexFill class='w-100 h-full dark '>
+  <mat-drawer mode="side" opened fxFlex='30%' class='no-scroll'>
+    <app-sidenav (output)='setCategory($event)'></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content fxFlex>
+
+    <div fxFlexFill fxLayout='column' *ngIf='error || loading' fxLayoutAlign='center center'>
+
+      <mat-spinner *ngIf='loading' [diameter]='80' fxFlexAlign='center'></mat-spinner>
+      <mat-error class='w-256' *ngIf='error'>
+        {{error | displayError }}
+      </mat-error>
+
+    </div>
+
+    <div *ngIf='!(error || loading)' fxLayout='column' fxLayoutAlign='start stretch' fxLayoutGap='2%' class=' pad-32 b'>
+
+      <div fxLayout='row' fxLayoutAlign='space-between center'>
+        <ng-container *ngFor='let i of highlights'>
+          <mat-card fxFlex='23%' class='pad-32' class='info-card' [ngClass]="i.bg">
+
+            <div fxLayout='row'>
+
+              <div fxFlex fxLayout='column' fxLayoutAlign='center center' class='mar-r-8 i'>
+
+                <button mat-fab color='secondary' class='white'>
+                  <mat-icon color='primary'>{{i.icon}}</mat-icon>
+                </button>
+
+              </div>
+
+              <div>
+                <h1 class='white'>{{i.title}}</h1>
+                <p class='white'> {{i.value}}</p>
+              </div>
+
+            </div>
+          </mat-card>
+        </ng-container>
+      </div>
+
+      <app-main class='b' [data]='data'></app-main>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>

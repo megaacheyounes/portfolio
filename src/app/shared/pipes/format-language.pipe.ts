@@ -6,7 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FormatLanguagePipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    return value.split(',')[0] || 'unknow';
+
+    return value ? value.split(',')[0] || 'unknown' : 'unknown';
+
   }
 
 }

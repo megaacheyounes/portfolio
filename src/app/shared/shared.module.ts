@@ -29,10 +29,12 @@ import {
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragScrollModule } from 'ngx-drag-scroll';
-import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgsRevealModule } from 'ngx-scrollreveal';
 import { StatsComponent } from '../stats/stats.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ConfigService } from './services/config.service';
+import { DisplayErrorPipe } from './pipes/display-error.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { StatsComponent } from '../stats/stats.component';
     TitleComponent,
     FormatDatePipe,
     FormatLanguagePipe,
-    StatsComponent
+    StatsComponent,
+    DisplayErrorPipe
   ],
   imports: [
     CommonModule,
@@ -63,13 +66,13 @@ import { StatsComponent } from '../stats/stats.component';
     MatCardModule,
     MatChipsModule,
     MatSnackBarModule,
-    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,
-    NgsRevealModule
+    NgsRevealModule,
+    HttpClientModule,
   ],
   exports: [
     LoaderComponent,
@@ -96,16 +99,20 @@ import { StatsComponent } from '../stats/stats.component';
     MatCardModule,
     MatChipsModule,
     MatSnackBarModule,
-    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,
-    NgsRevealModule
+    NgsRevealModule,
+    HttpClientModule,
+    DisplayErrorPipe
   ],
   entryComponents: [
     SuccessComponent
   ],
+  providers: [
+    ConfigService
+  ]
 })
 export class SharedModule { }

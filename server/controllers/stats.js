@@ -3,14 +3,11 @@ const Stat = require('../models/stat');
 const geocoding = require('reverse-geocoding');
 const dbService = require('../services/dbService');
 
-let loadStats = async (req, res) => {
 
+
+let loadStats = async (req, res) => {
   await dbService.connect();
 
-  let secret = req.queryString('secret');
-
-  if (secret !== 'nopass')
-    return res.status(403).end('You are not welcome here.');
 
   try {
 
@@ -93,6 +90,5 @@ let registerStat = async (req) => {
 
 module.exports = {
   loadStats,
-  registerStat,
-
+  registerStat
 };

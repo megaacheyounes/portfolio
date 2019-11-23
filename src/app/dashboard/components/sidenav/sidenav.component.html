@@ -1,0 +1,38 @@
+<div fxLayout='column' fxLayoutGap='5%'>
+
+  <div fxLayout='row' fxLayoutAlign='center center' class='pad-16 pad-t-32 bg-img h-256'>
+
+    <img class=" h-64 w-64 circle mat-elevation-z4 center-crop avatar  " src="assets/avatar.jpg" alt="">
+
+    <div class='mar-l-8 '>
+      <h1 class='no-mar-b white'>
+        {{name}}
+      </h1>
+
+      <h4 class=' no-pad no-mar-b white'>
+        {{email}}
+      </h4>
+    </div>
+  </div>
+
+
+  <ng-container *ngFor='let subMenu of menu;let last = last'>
+    <h4 class='no-mar pad-l-8 sub-menu-title'>{{subMenu.title}}</h4>
+    <mat-list>
+      <ng-container *ngFor='let item of subMenu.items'>
+        <mat-list-item>
+          <button fxFlex mat-button (click)='action(item.id)'>
+            <mat-icon matBadgeOverlap='true' [matBadge]='item.notification'>{{item.icon}}</mat-icon>
+            <span fxFlex>
+              {{item.name}}
+            </span>
+
+          </button>
+        </mat-list-item>
+      </ng-container>
+    </mat-list>
+
+  </ng-container>
+
+
+</div>

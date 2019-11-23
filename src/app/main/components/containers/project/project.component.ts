@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { ConfigService } from 'src/app/main/services/config.service';
+import { ConfigService } from 'src/app/shared/services/config.service';
 declare var $: any;
 
 @Component({

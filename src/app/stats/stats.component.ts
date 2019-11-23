@@ -11,7 +11,7 @@ import { Stat } from '../main/models/stat';
 export class StatsComponent implements OnInit {
 
   // stats = [];
-  secret = '';
+  secret = 'nopass';
   stats: Stat[];
   statsColumns: String[] = ['date', 'ip', 'method', 'language', 'device', 'location', 'os', 'browser'];
   error;
@@ -27,7 +27,7 @@ export class StatsComponent implements OnInit {
   }
 
   loadStats() {
-    const url = /* 'http://localhost:3000' + */ '/stats';
+    const url = 'http://localhost:3000' + '/stats';
     console.log('secret', this.secret);
     this.http.post(url, { secret: this.secret }).subscribe((data: Stat[]) => {
       this.dataSource = new MatTableDataSource<Stat>(data);

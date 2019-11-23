@@ -16,9 +16,9 @@ const CV_SIZES = {
   'webDeveloper': '84205'
 }
 
-const CV_URL = type => `/cv?type=${type}`;
+const CV_URL = type => `/api/cv?type=${type}`;
 
-describe('/cv', () => {
+describe('/api/cv', () => {
 
   CVs.forEach(cv => {
 

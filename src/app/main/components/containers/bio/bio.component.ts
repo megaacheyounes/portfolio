@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ConfigService } from 'src/app/main/services/config.service';
-import { CvService } from 'src/app/main/services/cv.service';
+import { ConfigService } from 'src/app/shared/services/config.service';
+import { CvService, SOFTWARE_ENGINEER } from 'src/app/main/services/cv.service';
 
 
 
@@ -38,8 +38,8 @@ export class BioComponent implements OnInit {
   }
 
   showCV(type?) {
-    //    this._cvService.showCV(type);
-    this.downloadEvent.emit(type);
+    this._cvService.showCV(SOFTWARE_ENGINEER);
+    //this.downloadEvent.emit(type);
   }
 
 
