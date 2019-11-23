@@ -9,10 +9,10 @@ const DATABASE_URL = 'mongodb://megaache2:Pink700new@ds115094.mlab.com:15094/por
 const connect = () => {
   return mongoose.connect(DATABASE_URL, {
     useNewUrlParser: true,
-    //useUnifiedTopology: true,
-    useCreateIndex: true
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    connectTimeoutMS: 5000,
   });
-
 }
 
 const getStats = () => {

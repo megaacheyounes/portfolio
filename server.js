@@ -67,24 +67,35 @@ var fs = require('fs');
 
 
 app.use(async (req, res, next) => {
-  if (!req.url.includes('assets')) {
+  const url = req.url;
+  const shouldNotInclude = ['assets', '.js', '.css', '.jpg', '.png'];
+  let skip = false;
+  shouldNotInclude.forEach(c => {
+    skip = skip || url.includes(c);
+  });
 
+  if (!skip) {
     await statsController.registerStat(req);
   }
+
   next();
 });
 
 app.use('/', routes);
 
+// Send all other requests to the Angular app
+
+app.get('/dashboard', (req, res) => {
+  res.sendFile(path.join(__dirname, './dist/index.html'));
+});
+
+
+
 // Angular DIST output folder
 app.use(express.static(path.join(__dirname, 'dist'), {
   maxAge: 86400000
 }));
-// Send all other requests to the Angular app
-/* app.get('/dashboard', (req, res) => {
-  res.sendFile(path.join(__dirname, './dist/index.html'));
-});
- */
+
 
 //Set Port
 const port = process.env.PORT || '3000';
