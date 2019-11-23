@@ -52,17 +52,7 @@ app.use(bodyParser.urlencoded({
 
 //app.use(validator());
 
-//load server on fileChange just like nodeman
-/* var watcher = chokidar.watch('./server')
 
-watcher.on('ready', function () {
-  watcher.on('all', function () {
-    console.log("Clearing /server/ module cache from server")
-    Object.keys(require.cache).forEach(function (id) {
-      if (/[\/\\]server[\/\\]/.test(id)) delete require.cache[id]
-    })
-  })
-}) */
 var fs = require('fs');
 
 
@@ -81,9 +71,15 @@ var fs = require('fs');
   next();
 });
  */
+
+// Angular DIST output folder
+app.use(express.static(path.join(__dirname, './dist'), {
+  maxAge: 86400000
+}));
+
+
 app.use('/', routes);
 
-// Send all other requests to the Angular app
 
 /* app.get('/dashboard', (req, res) => {
   res.sendFile(path.join(__dirname, './dist/index.html'));
@@ -91,10 +87,6 @@ app.use('/', routes);
 
  */
 
-// Angular DIST output folder
-app.use(express.static(path.join(__dirname, 'dist'), {
-  maxAge: 86400000
-}));
 
 
 //Set Port
