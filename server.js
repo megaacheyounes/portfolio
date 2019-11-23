@@ -66,7 +66,7 @@ watcher.on('ready', function () {
 var fs = require('fs');
 
 
-app.use(async (req, res, next) => {
+/* app.use(async (req, res, next) => {
   const url = req.url;
   const shouldNotInclude = ['assets', '.js', '.css', '.jpg', '.png'];
   let skip = false;
@@ -80,7 +80,7 @@ app.use(async (req, res, next) => {
 
   next();
 });
-
+ */
 app.use('/', routes);
 
 // Send all other requests to the Angular app
