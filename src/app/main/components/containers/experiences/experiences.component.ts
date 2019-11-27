@@ -17,5 +17,8 @@ export class ExperiencesComponent implements OnInit {
     this.exps = this._configService.experience;
   }
 
+  openLink(link) {
+    window.open(link, '_blank');
+  }
 
 }

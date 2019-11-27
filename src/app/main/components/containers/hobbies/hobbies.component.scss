@@ -30,17 +30,39 @@
   background-blend-mode: color;
   opacity: .5;
   transition: all 350ms ease-out;
+
 }
 
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  max-height: inherit;
+  transition: all 1000ms ease-out;
+  -moz-transition: all 1000ms ease-out;
+  -ms-transition: all 1000ms ease-out;
+  -o-transition: all 1000ms ease-out;
+  -webkit-transition: all 1000ms ease-out;
+}
+
+.bb:hover .bg {
+  background-size: 120%;
+
+}
 
 .bb {
   transition: all 1000ms ease-out;
   background-position: center;
   background-size: cover;
+  position: relative;
+
+
 
   :hover {
-    background-position-y: -5px;
-    filter: saturate(110%) brightness(110%);
+    filter: saturate(120%) brightness(120%);
+
 
     .t {
       transform: translateY(-5px);

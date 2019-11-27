@@ -1,9 +1,6 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import { ConfigService } from 'src/app/shared/services/config.service';
 import { CvService, SOFTWARE_ENGINEER } from 'src/app/main/services/cv.service';
-
-
 
 @Component({
   selector: 'app-bio',
@@ -16,11 +13,11 @@ export class BioComponent implements OnInit {
 
   @ViewChild('statsForm', { static: true }) statsForm;
 
-
   constructor(private _configService: ConfigService,
     private _cvService: CvService) { }
 
   ngOnInit() {
+
     /*  if (navigator.geolocation) {
        navigator.geolocation.getCurrentPosition(position => {
          this.statsForm.nativeElement.lt.value = (position.coords.latitude);
@@ -50,6 +47,7 @@ export class BioComponent implements OnInit {
   get birthday() {
     return this._configService.birthday;
   }
+
 
 
 

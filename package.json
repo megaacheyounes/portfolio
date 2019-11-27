@@ -52,6 +52,7 @@
     "ngx-cookie-service": "^2.2.0",
     "ngx-drag-scroll": "^7.4.3",
     "ngx-scrollreveal": "^3.0.0",
+    "particles.js": "^2.0.0",
     "request": "^2.88.0",
     "reverse-geocoding": "^3.0.2",
     "rxjs": "^6.5.3",
