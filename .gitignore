@@ -1,19 +1,11 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
-/files/*.cv.pdf
-/src/assets/cc.jpg
-/src/assets/avatar.jpg
-
-
-
-
+  
 /tmp
 /out-tsc
 
 # dependencies
 /node_modules
-
-
+ 
 # IDEs and editors
 /.idea
 .project
