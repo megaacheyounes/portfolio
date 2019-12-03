@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 // resume types
-export const SOFTWARE_ENGINEER = 'softwareEngineer', WEB = 'webDeveloper', ANDROID = 'androidDeveloper';
+export const SOFTWARE_ENGINEER = 'SoftwareEngineer', WEB = 'FullStackWebDeveloper', ANDROID = 'AndroidDeveloper';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class CvService {
 
   constructor() { }
 
-  showCV(type = SOFTWARE_ENGINEER) {
+  showCV(type = WEB) {
     window.open(this.resumeUrl(type), '_blank');
 
     /*  try {

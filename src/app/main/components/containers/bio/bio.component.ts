@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { ConfigService } from 'src/app/shared/services/config.service';
-import { CvService, SOFTWARE_ENGINEER } from 'src/app/main/services/cv.service';
+import { CvService } from 'src/app/main/services/cv.service';
 
 @Component({
   selector: 'app-bio',
@@ -35,7 +35,7 @@ export class BioComponent implements OnInit {
   }
 
   showCV(type?) {
-    this._cvService.showCV(SOFTWARE_ENGINEER);
+    this._cvService.showCV();
     //this.downloadEvent.emit(type);
   }
 
