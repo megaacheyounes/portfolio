@@ -1,9 +1,9 @@
-export const DEBUG = true;
+export const DEBUG = false;
 
 export const TOKEN_COOKIE_KEY = 'token';
 export const TOKEN_HEADER = 'X-AUTHORIZATION';
 
-const STATS_BASE_URL = DEBUG ? `http://localhost:3000/api` : '';
+const STATS_BASE_URL = (DEBUG ? `http://localhost:3000/` : '') + 'api';
 export const STATS_URL = `${STATS_BASE_URL}/stats`;
 export const LOGIN_URL = `${STATS_BASE_URL}/login`;
 
