@@ -34,6 +34,9 @@ export const EXPERIENCES = [
                 title: 'Hotel demo',
                 url: 'ht' + 'tp://' + 'demo.hotel.algebratec' + '.com'
             }, {
+                title: 'documentation page',
+                url: 'ht' + 'tp://' + ' api.algebratec.' + 'com/documentation'
+            }, {
                 title: 'Trip online',
                 url: 'ht' + 'tp://' + 'triponline' + '.pro'
             }, {

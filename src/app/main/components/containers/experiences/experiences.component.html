@@ -35,7 +35,7 @@
     <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="16px">
       <ng-container *ngFor='let a of exp.achievements'>
         <button mat-button mat-flat-button class='mar-b-16' color='primary' (click)="openLink(a.url)" fxFlex='30%'
-          fxFlex.lt-md='45%'>
+          fxFlex.lt-md='45%' fxFlex.xs='95%' fxFlex.md='45%'>
           {{a.title}}
           <mat-icon>open_in_new</mat-icon>
         </button>
