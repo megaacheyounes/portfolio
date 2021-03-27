@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-declare var WOW: any;
+ 
 declare var particlesJS: any;
 
 @Component({
