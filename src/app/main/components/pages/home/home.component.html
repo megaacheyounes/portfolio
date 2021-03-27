@@ -1,6 +1,7 @@
-<div ngClass.gt-sm='bio '>
+<div  id="particles-js"></div>
 
-  <div fxFlex.gt-sm='30%' fxLayout.lt-md='100%' fxFlexFill fxLayout='column' fxLayoutAlign='center center'
+<div ngClass.gt-sm='bio '>
+  <div fxFlex.gt-sm='35%' fxLayout.lt-md='100%' fxFlexFill fxLayout='column' fxLayoutAlign='center center'
     class='bg-cc full-height fh pad-32 mat-elevation-z8'>
 
     <app-bio class=' mar-t-16     mar-32' (downloadEvent)='dc.reveal()'></app-bio>
@@ -10,21 +11,22 @@
 
 <div fxLayout='row ' [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'">
 
-  <div fxFlexOffset.gt-sm='30% ' fxFlex.lg='70% ' fxFlex.lt-md='100% ' class='scroll-y ' fxLayout='column '>
+  <div fxFlexOffset.gt-sm='35% ' fxFlex.lg='70% ' fxFlex.lt-md='100% ' class='scroll-y ' fxLayout='column '>
 
-    <app-education></app-education>
 
     <app-experiences></app-experiences>
 
+    <app-education></app-education>
+
     <app-skills class='mar-32'></app-skills>
 
-    <app-project></app-project>
+    <!-- <app-project></app-project> -->
 
     <app-certificates class='mar-32 '></app-certificates>
 
     <app-hobbies class='  '></app-hobbies>
 
-    <app-download-cv #dc></app-download-cv>
+    <!-- <app-download-cv #dc></app-download-cv> -->
 
     <app-contact class=' '></app-contact>
 

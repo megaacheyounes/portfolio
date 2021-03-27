@@ -1,14 +1,28 @@
-const path = require('path');
+const path = require("path");
 
-let statController = require('./stats');
+let statController = require("./stats");
+
+const allowedTypes = [
+  "softwareEngineer",
+  //,'webDeveloper','AndroidEngineer'
+];
 
 let showCV = async (req, res) => {
-  await statController.registerStat(req);
-  const type = req.queryString('type');
-  const cvName = type => `YounesMegaache.${type}.cv.pdf`;
-  res.sendFile(path.join(__dirname, '../../files/' + cvName(type)));
-}
+  try {
+    await statController.registerStat(req);
+  } catch (e) {
+    console.log(e);
+  }
+
+  const type = req.queryString("type");
+  if (allowedTypes.indexOf(type) == -1) type = allowedTypes[0];
+
+  const cvName = (type) => `YounesMegaache.${type}.cv.pdf`;
+
+  const cvPath = path.join(__dirname, "../../files/" + cvName(type));
+  res.sendFile(cvPath);
+};
 
 module.exports = {
-  showCV
+  showCV,
 };

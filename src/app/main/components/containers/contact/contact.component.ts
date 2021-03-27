@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBarConfig, MatSnackBar } from '@angular/material';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { SuccessComponent } from 'src/app/shared/components/success/success.component';
+import { BASE_API_URL } from 'src/app/main/services/config.service';
 
 
 
@@ -12,9 +13,8 @@ import { SuccessComponent } from 'src/app/shared/components/success/success.comp
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
-
-  CONTACT_URL = /*'http://localhost:3000'+*/ '/contact';
+ 
+  CONTACT_URL = BASE_API_URL + '/contact';
 
   form: FormGroup = new FormGroup({
     name: new FormControl('',
@@ -25,11 +25,11 @@ export class ContactComponent implements OnInit {
     ]),
     subject: new FormControl('', [
       Validators.required,
-      Validators.minLength(10)
+      Validators.minLength(3)
     ]),
     message: new FormControl('', [
       Validators.required,
-      Validators.minLength(10),
+      Validators.minLength(3),
       Validators.maxLength(4000),
     ])
   });
@@ -56,15 +56,12 @@ export class ContactComponent implements OnInit {
       message: ''
     });
   }
-
-
+ 
   send(value) {
     if (!this.form.valid) {
       return;
     }
-
-
-
+ 
     this.http.post(this.CONTACT_URL, value)
       .subscribe(data => {
         // this.reinit();
@@ -77,7 +74,6 @@ export class ContactComponent implements OnInit {
         }
       });
   }
-
   showSnackbar(message) {
     const config: MatSnackBarConfig = new MatSnackBarConfig();
     config.duration = 1000 * 5;

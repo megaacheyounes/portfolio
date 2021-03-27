@@ -13,14 +13,11 @@ export class SkillsComponent implements OnInit {
   ngOnInit() {
   }
 
-  get skills1() {
-    return this._configService.skills.slice(0, this._configService.skills.length / 2);
+   getSkills(index) {
+    return this._configService.skills[index];
   }
 
-  get skills2() {
-    return this._configService.skills.slice(this._configService.skills.length / 2);
-  }
-
+   
   get otherSkills() {
     return this._configService.additionalSkills;
   }

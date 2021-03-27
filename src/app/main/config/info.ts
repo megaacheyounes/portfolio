@@ -20,7 +20,7 @@ export const PERSONAL_INFORMATION = [
     },
     {
         icon: 'assets/location-web.png',
-        value: '45 40b St, Deira, Dubai, UAE'
+        value: 'Dubai, UAE'
     },
     {
         icon: 'assets/mail-web.png',

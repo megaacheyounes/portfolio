@@ -5,10 +5,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './main/main.module#MainModule'
-  }/* , {
-    path: '/stats',
-    loadChildren: () => import('./stats/stats.module').then(m => m.StatsModule)
-  } */
+  } 
+  // , {
+  //   path: '/admin',
+  //   loadChildren: () => import('./stats/stats.module').then(m => m.StatsModule)
+  // }
 ];
 
 @NgModule({

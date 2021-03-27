@@ -12,43 +12,49 @@
   }
 }
 
-.cv {
-  position: relative;
-  bottom: -32px;
-}
-
 .pull-up-64 {
   position: relative;
   top: -64px;
 }
 
 .bg-li {
-  background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+  background-image: linear-gradient(135deg, #abdcff 10%, #0396ff 100%);
   color: white;
 }
 
-.bg-cc {
-  background-image: url(src/assets/cc.jpg), linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
-  background-image: url(src/assets/cc.jpg), -webkit-linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
-  background-image: url(src/assets/cc.jpg), -moz-linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
-  background-image: url(src/assets/cc.jpg), -o-linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-position: center;
-}
-
 .ccc {
-  background: rgba($color: #ffffff, $alpha: 0.8);
+  background: rgba($color: #ffffff, $alpha: 0.7);
 }
 
 .wbg {
   // background: #ffffffaf;
 }
 
-.codewars {
-  background: #313131;
+.bg-git {
+  background-image: linear-gradient(135deg, #515151 10%, #212121 100%);
+  color: white;
 
   img {
-    width: 300px !important;
+    filter: brightness(1000);
+    height: 24px;
   }
+}
+
+.github-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  opacity: 0.7;
+  transition: 0.3s all ease-out; 
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.github-btn:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.438);
+  opacity: 1; 
+  transform: scale(1.2);
 }

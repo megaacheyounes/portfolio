@@ -19,7 +19,7 @@ import { SharedModule } from '../shared/shared.module';
 import { MainRoutingModule } from './main.routing';
 import { ConfigService } from './services/config.service';
 import { DownloadCVComponent } from './components/containers/download-cv/download-cv.component';
-
+ 
 @NgModule({
   declarations: [
     BioComponent,
@@ -39,10 +39,11 @@ import { DownloadCVComponent } from './components/containers/download-cv/downloa
     WebsiteCardComponent,
     DownloadCVComponent
   ],
-  imports: [
-    CommonModule,
+  imports: [ 
+     CommonModule,
     SharedModule,
-    MainRoutingModule
+    MainRoutingModule, 
+    
   ],
   providers: [
     ConfigService

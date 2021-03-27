@@ -1,22 +1,23 @@
-const fieldRequired = (field, res) => res.status(400).json(`'${field}' is missing!`);
+const fieldRequired = (field, res) =>
+  res.status(400).json(`'${field}' is missing!`);
 
 let sendMessage = (req, res) => {
   if (!req.body.message && !req.body.email) {
     res.status(400);
-    res.json('error');
+    res.json("error");
     return;
   }
 
-  name = req.bodyString('name');
-  email = req.bodyString('email');
-  subject = req.bodyString('subject');
-  message = req.bodyString('message');
+  name = req.bodyString("name");
+  email = req.bodyString("email");
+  subject = req.bodyString("subject");
+  message = req.bodyString("message");
 
   const requiredFields = {
     name,
     email,
     subject,
-    message
+    message,
   };
 
   for (let key in requiredFields)
@@ -24,20 +25,18 @@ let sendMessage = (req, res) => {
       return fieldRequired(key, res);
     }
 
-
   email = {
+    to: process.env.CONTACT_EMAIL,
     from: email,
-    to: 'megaache.younes@gmail.com',
-    subject: '[Portfolio Message] ' + subject,
+    subject: "[FROM ONLINE RESUME] " + subject,
     text: message,
-  }
+  };
+  console.log("contact email: " + email.to);
 
   sendMail(req, res, email);
+};
 
-}
-
-
-const sgMail = require('@sendgrid/mail');
+const sgMail = require("@sendgrid/mail");
 
 function sendMail(req, res, email) {
   //smtp-relay.gmail.com
@@ -45,18 +44,15 @@ function sendMail(req, res, email) {
   sgMail.setApiKey(apiKey);
 
   sgMail.send(email, false, (err, result) => {
-
     if (err) {
-      console.log('send email:' + err);
+      console.log("send email:" + err);
       return res.status(403).json(err);
     }
-
-    return res.json('email was sent successfully.');
-
+    console.log(result);
+    return res.json("email was sent successfully.");
   });
-
 }
 
 module.exports = {
-  sendMessage
+  sendMessage,
 };

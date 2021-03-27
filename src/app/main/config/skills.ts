@@ -1,52 +1,100 @@
 export const SKILLS = [
+  [
     {
-        name: 'Angular',
-        value: '90'
+      name: "Android",
+      value: "90",
     },
     {
-        name: 'JQuery',
-        value: '50'
+      name: "HarmonyOS",
+      value: "90",
     },
     {
-        name: 'ExpressJS',
-        value: '50'
+      name: "Kotlin",
+      value: "100",
     },
     {
-        name: 'Laravel',
-        value: '70'
+      name: "Java",
+      value: "100",
     },
     {
-        name: 'MySQL',
-        value: '80'
+      name: "Java",
+      value: "90",
+    },
+  ],
+  [
+    {
+      name: "Angular",
+      value: "90",
     },
     {
-        name: 'Mongodb',
-        value: '50'
+      name: "JavaScript (ES6)",
+      value: "100",
     },
     {
-        name: 'Android',
-        value: '90'
+      name: "CSS/SCSS",
+      value: "100",
     },
     {
-        name: 'Java',
-        value: '90'
+      name: "HTML",
+      value: "100",
     },
     {
-        name: 'C',
-        value: '50'
+      name: "Wordpress",
+      value: "50",
+    },
+  ],
+  [
+    {
+      name: "NodeJS",
+      value: "80",
     },
     {
-        name: 'Matlab',
-        value: '40'
+      name: "ExpressJS",
+      value: "80",
     },
     {
-        name: 'Wordpress',
-        value: '50'
+      name: "Laravel",
+      value: "70",
     },
     {
-        name: 'Linux',
-        value: '50'
-    }
+      name: "PHP",
+      value: "80",
+    },
+    {
+      name: "MySQL",
+      value: "80",
+    },
+    {
+      name: "Mongodb",
+      value: "50",
+    },
+
+    {
+      name: "Linux",
+      value: "50",
+    },
+  ],
 ];
 
-export const ADDITIONAL_SKILLS = ['GIT', 'CI/CD', 'Bitbucket', 'Firebase', 'Heroku', 'photoshop', 'after effects'];
+export const ADDITIONAL_SKILLS = [
+  "GIT",
+  "Firebase",
+  "Google Mobile Services",
+  "Huawei Mobile Services", 
+  "Unit Testing", 
+  "Bootstrap",
+  "MaterializeCss",
+  "Angular Material",
+  "Passport", 
+  "Heroku",
+  "Bitbucket",
+  "CI/CD",
+  "MVC",
+  "MVVM",
+  "TDD",
+  "Mocha",
+  "ChaiJs",
+  "PhotoShop",
+  "After Effects",
+  "Figma", 
+];

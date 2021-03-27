@@ -1,12 +1,10 @@
 <div class=' '>
 
   <app-title icon='work' title='Experience' margins="true"></app-title>
-
-
-
+ 
   <mat-card *ngFor='let exp of exps' [ngsRevealSet]="{ reset:true}" [ngsSelector]="'.reveal'" class='mar-32 bl  reveal'>
 
-    <a *ngIf='exp.companyLogo' target='_blank' class='top-right  ' [href]="exp.website">
+    <a *ngIf='exp.companyLogo' target='_blank' class='top-right' [href]="exp.website">
       <img [src]="exp.companyLogo" class='w-128 reveal ' alt="">
     </a>
 
@@ -27,9 +25,11 @@
     </h1>
 
     <h3 class='reveal'>Experiences:</h3>
-    <p *ngFor='let experience of exp.experiences' class='reveal'>
+    <ul *ngFor='let experience of exp.experiences' class='reveal'>
+     <li>
       {{experience}}
-    </p>
+         </li>
+    </ul>
 
     <h3 class='reveal'>Technologies:</h3>
     <mat-chip-list>

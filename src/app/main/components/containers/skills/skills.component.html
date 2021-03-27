@@ -1,26 +1,36 @@
-<mat-card fxFLex class='reveal'>
+<mat-card fxFLex class="reveal">
+  <app-title icon="done_all" title="Skills"></app-title>
 
-  <app-title icon='done_all' title='Skills'></app-title>
-
-
-  <div fxLayout.gt-sm="row" fxLayout.lt-md='column' fxLayoutGap='5%'>
-
-    <div fxFlex='50%'>
-      <app-skills-item *ngFor='let skill of skills1' [skill]='skill'>
+  <!-- fxLayoutGap.md='0%'  fxLayoutGap='5%' -->
+  <div fxLayout.lt-md='column' fxLayout.md="column" fxLayout.gt-md="row" fxLayoutGap='5%'  >
+    <div fxFlex="33.3%">
+      <app-skills-item *ngFor="let skill of getSkills(0)" [skill]="skill">
       </app-skills-item>
     </div>
-    <div fxFlex='50%'>
-      <app-skills-item *ngFor='let skill2 of skills2' [skill]='skill2'></app-skills-item>
+    <div fxFlex="33.3%">
+      <app-skills-item
+        *ngFor="let skill2 of getSkills(1)"
+        [skill]="skill2"
+      ></app-skills-item>
+    </div>
+    <div fxFlex="33.3%">
+      <app-skills-item
+        *ngFor="let skill2 of getSkills(2)"
+        [skill]="skill2"
+      ></app-skills-item>
     </div>
   </div>
 
-  <mat-card class='pull-down reveal' fxLayoutAlign='center center'>
-    <h4 fxLayout='row wrap'>
-      <span class='mar-l-16  ' fxLayoutAlign='center center' *ngFor='let skill of otherSkills'>
-        <mat-icon class='mar-r-4'>done </mat-icon>
-        {{skill}}
+  <mat-card class="pull-down reveal" fxLayoutAlign="center center">
+    <h4 fxLayout="row wrap">
+      <span
+        class="mar-l-16"
+        fxLayoutAlign="center center"
+        *ngFor="let skill of otherSkills"
+      >
+        <mat-icon class="mar-r-4">done </mat-icon>
+        {{ skill }}
       </span>
     </h4>
   </mat-card>
-
 </mat-card>

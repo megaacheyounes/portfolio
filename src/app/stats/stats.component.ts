@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 import { Stat } from '../main/models/stat';
+import { BASE_API_URL } from '../main/services/config.service';
 
 @Component({
   selector: 'app-stats',
@@ -27,7 +28,7 @@ export class StatsComponent implements OnInit {
   }
 
   loadStats() {
-    const url = /* 'http://localhost:3000' + */ '/stats';
+    const url = BASE_API_URL + '/stats';
     console.log('secret', this.secret);
     this.http.post(url, { secret: this.secret }).subscribe((data: Stat[]) => {
       this.dataSource = new MatTableDataSource<Stat>(data);

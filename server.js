@@ -9,9 +9,7 @@ const helmet = require('helmet')
 const sanitize = require('sanitize')
 const routes = require('./server/routes');
 var compression = require('compression')
-
-
-
+require('dotenv').config()
 
 // compress all responses
 //should be removed on production version
@@ -58,6 +56,7 @@ watcher.on('ready', function () {
   })
 }) */
 var fs = require('fs');
+const { ConsoleReporter } = require('jasmine');
 app.use('/', routes);
 
 /*app.get('*',(req, res) => {
@@ -75,7 +74,7 @@ const port = process.env.PORT || '3000';
 app.set('port', port);
 
 const server = http.createServer(app);
-
+ 
 
 server.listen(port, () => console.log(`Running on localhost:${port}`));
 

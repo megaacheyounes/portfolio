@@ -1,19 +1,23 @@
-import { Injectable } from '@angular/core';
-import { BIRTHDAY, PERSONAL_INFORMATION } from '../config/info';
-import { EDUCATION } from '../config/education';
-import { EXPERIENCES, PRESENT } from '../config/experiences';
-import { SKILLS, ADDITIONAL_SKILLS } from '../config/skills';
-import { WEBSITES, APPS } from '../config/projects';
-import { CERTIFICATES } from '../config/certificates';
-import { INTERESTS } from '../config/interests';
+import { Injectable } from "@angular/core";
+import { BIRTHDAY, PERSONAL_INFORMATION } from "../config/info";
+import { EDUCATION } from "../config/education";
+import { EXPERIENCES, PRESENT } from "../config/experiences";
+import { SKILLS, ADDITIONAL_SKILLS } from "../config/skills";
+import { WEBSITES, APPS } from "../config/projects";
+import { CERTIFICATES } from "../config/certificates";
+import { INTERESTS } from "../config/interests";
+import { environment } from "src/environments/environment";
 
+export const BASE_API_URL = environment.production ? "" : "http://localhost:3000";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class ConfigService {
+  LOCAL = true;
+  BASE_API_URL = this.LOCAL ? "http://localhost:3000" : "";
 
-  constructor() { }
+  constructor() {}
 
   get birthday() {
     return BIRTHDAY;
@@ -28,8 +32,8 @@ export class ConfigService {
   }
 
   get experience() {
-    return EXPERIENCES.map(experience => {
-      experience['duration'] = this.getDuration(experience);
+    return EXPERIENCES.map((experience) => {
+      experience["duration"] = this.getDuration(experience);
       return experience;
     });
   }
@@ -58,19 +62,15 @@ export class ConfigService {
     return INTERESTS;
   }
 
-
   getDuration(exp) {
-
-    let present = false;
     let endDate;
     if (exp.end === PRESENT) {
       endDate = new Date();
-      present = true;
     } else {
-      endDate = this.toDate(exp.end);
+      endDate = new Date(Date.parse(exp.end));
     }
 
-    const startDate = this.toDate(exp.start);
+    const startDate = new Date(Date.parse(exp.start));
 
     let m = this.mDiff(startDate, endDate);
     let y = 0;
@@ -80,29 +80,14 @@ export class ConfigService {
       m -= y * 12;
     }
 
-    return   (y > 0 ? `${y} y ` : '') + `${m} mo`;
+    return (y > 0 ? `${y} yr ` : "") + `${m} mos`;
   }
-
 
   mDiff(d1: Date, d2: Date) {
-    const d1Y = d1.getFullYear();
-    const d2Y = d2.getFullYear();
-    const d1M = d1.getMonth();
-    const d2M = d2.getMonth();
-    return (d2M + 12 * d2Y) - (d1M + 12 * d1Y);
+    var months;
+    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    months -= d1.getMonth();
+    months += d2.getMonth();
+    return months <= 0 ? 0 : months;
   }
-
-  toDate(my) {
-    const p = my.split('/');
-
-    const date = new Date();
-
-    date.setMonth(p[0]);
-    date.setFullYear(p[1]);
-    date.setDate(1);
-
-    return date;
-  }
-
-
 }

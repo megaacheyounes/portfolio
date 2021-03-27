@@ -1,24 +1,31 @@
-import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { ConfigService } from 'src/app/main/services/config.service';
-import { CvService } from 'src/app/main/services/cv.service';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  Output,
+  EventEmitter,
+  AfterViewInit,
+} from "@angular/core";
+import { FormGroup, FormControl } from "@angular/forms";
+import { ConfigService } from "src/app/main/services/config.service";
+import { CvService } from "src/app/main/services/cv.service";
 
-
+declare var particlesJS: any;
 
 @Component({
-  selector: 'app-bio',
-  templateUrl: './bio.component.html',
-  styleUrls: ['./bio.component.scss']
+  selector: "app-bio",
+  templateUrl: "./bio.component.html",
+  styleUrls: ["./bio.component.scss"],
 })
-export class BioComponent implements OnInit {
-
+export class BioComponent implements OnInit,AfterViewInit {
   @Output() downloadEvent = new EventEmitter();
 
-  @ViewChild('statsForm', { static: true }) statsForm;
+  @ViewChild("statsForm", { static: true }) statsForm;
 
-
-  constructor(private _configService: ConfigService,
-    private _cvService: CvService) { }
+  constructor(
+    private _configService: ConfigService,
+    private _cvService: CvService
+  ) {}
 
   ngOnInit() {
     /*  if (navigator.geolocation) {
@@ -36,12 +43,13 @@ export class BioComponent implements OnInit {
 
     }*/
   }
-
-  showCV(type?) {
-    //    this._cvService.showCV(type);
-    this.downloadEvent.emit(type);
+  
+  ngAfterViewInit() {
   }
 
+  showCV(type?) {
+    this._cvService.showCV(type);
+  }
 
   get infos() {
     return this._configService.infos;
@@ -50,7 +58,4 @@ export class BioComponent implements OnInit {
   get birthday() {
     return this._configService.birthday;
   }
-
-
-
 }
