@@ -47,6 +47,10 @@ export class BioComponent implements OnInit,AfterViewInit {
   ngAfterViewInit() {
   }
 
+  goToRepo(){
+    window.open("https://github.com/megaacheyounes/portfolio","_blank");
+  }
+
   showCV(type?) {
     this._cvService.showCV(type);
   }
