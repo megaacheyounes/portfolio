@@ -1,6 +1,11 @@
-# [My Personal website](http://megaache-younes.herokuapp.com)
+# [Online Resume](http://megaache-younes.herokuapp.com)
 
-My personal website/online resume built using Angular and NodeJS based on the MEAN stack.
+My personal website (online resume) built on Angular and NodeJS based on the MEAN stack.
+
+## run locally
+
+1. Start the server with command: `npm start` or `node server.js`
+2. In different terminal, start angular app: `ng serve -o`
 
 ## Env
 
@@ -20,12 +25,7 @@ Resume (CV) and some assets (profile picture/sidebar background(portrait)) were 
 
 Server side code is in folder **server**, include code for download resume (CV), resume must be uploaded to **/server/files** , you can change the name of file in **/server/controllers/cv.js**.
 
-Message will be sent to your email using SendGrid, set your email address as environment variable names **DESTINATION_EMAIL**, and get an API KEY from sendgrid and save to an environment variable names **SENDGRID_API_KEY**.
-
-## run locally
-
-- First, Start the server with command: `npm start` or `node server.js`
-- Then in different terminal, start angular app: `ng serve -o`
+Message will be sent to your email using **nodemailer**, set your email address and as environment variable names **CONTACT_EMAIL** which will receive the message, and add an email address and password which will be used to send the message as an email to your **CONTACT_EMAIL**, sending email should be set to env variable names **NODEMAILER_EMAIL** and its password **NODEMAILER_PASSWORD**
 
 ## Tests
 

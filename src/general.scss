@@ -600,9 +600,13 @@
   color: black;
 }
 
-.pull-up {
+.pull-up-64 {
   position: relative;
   top: -64px;
+}
+.pull-up-32 {
+  position: relative;
+  top: -32px;
 }
 
 .pull-down {

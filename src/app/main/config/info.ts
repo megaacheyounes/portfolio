@@ -10,6 +10,10 @@ export const PERSONAL_INFORMATION = [
         icon: 'assets/nopp-web.png',
         value: 'Younes Megaache'
     },
+    {
+        icon: 'assets/nopp-web.png',
+        value: 'Software Engineer'
+    },
         {
         icon: 'assets/cake.png',
         value: BIRTHDAY + ' (' + age() + ' years old)'

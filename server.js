@@ -74,7 +74,8 @@ const port = process.env.PORT || '3000';
 app.set('port', port);
 
 const server = http.createServer(app);
- 
+
+// console.log("env:", process.env);
 
 server.listen(port, () => console.log(`Running on localhost:${port}`));
 
