@@ -3,17 +3,17 @@
 
   <!-- fxLayoutGap.md='0%'  fxLayoutGap='5%' -->
   <div fxLayout.lt-md='column' fxLayout.md="column" fxLayout.gt-md="row" fxLayoutGap='5%'  >
-    <div fxFlex="33.3%">
+    <div fxFlex.lt-sm="100%" fxFlex.gt-sm="33%">
       <app-skills-item *ngFor="let skill of getSkills(0)" [skill]="skill">
       </app-skills-item>
     </div>
-    <div fxFlex="33.3%">
+    <div fxFlex.lt-sm="100%" fxFlex.gt-sm="33%">
       <app-skills-item
         *ngFor="let skill2 of getSkills(1)"
         [skill]="skill2"
       ></app-skills-item>
     </div>
-    <div fxFlex="33.3%">
+    <div fxFlex.lt-sm="100%" fxFlex.gt-sm="33%">
       <app-skills-item
         *ngFor="let skill2 of getSkills(2)"
         [skill]="skill2"

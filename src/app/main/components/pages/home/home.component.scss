@@ -22,15 +22,19 @@
   object-fit: cover;
 }
 
+$bg-url:'../../../../../assets/sidenav.png';
+
 .bg-cc {
-  background-image: url(src/assets/cc.png),
+  background-image:  url($bg-url),
     linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
-  background-image: url(src/assets/cc.png),
-    -webkit-linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
-  background-image: url(src/assets/cc.png),
-    -moz-linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
-  background-image: url(src/assets/cc.png),
-    -o-linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+  
+    // background-image: $bg-url,
+  //   -webkit-linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+  // background-image: $bg-url,
+  //   -moz-linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+  // background-image: $bg-url,
+  //   -o-linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;

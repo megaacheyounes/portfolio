@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { MatSnackBarConfig, MatSnackBar } from '@angular/material';
+
+import { MatSnackBarConfig, MatSnackBar } from '@angular/material/snack-bar';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { SuccessComponent } from 'src/app/shared/components/success/success.component';
 import { BASE_API_URL } from 'src/app/main/services/config.service';

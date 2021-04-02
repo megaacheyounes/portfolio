@@ -1,6 +1,6 @@
 # [My Personal website](http://megaache-younes.herokuapp.com)
 
-My personal website/online resume built based on the MEAN stack.
+My personal website/online resume built using Angular and NodeJS based on the MEAN stack.
 
 ## Env
 

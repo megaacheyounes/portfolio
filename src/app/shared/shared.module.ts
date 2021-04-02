@@ -10,22 +10,28 @@ import { FormatLanguagePipe } from './pipes/format-language.pipe';
 import { SuccessComponent } from './components/success/success.component';
 import { TitleComponent } from './components/title/title.component';
 
-import {
-  MatFormFieldModule,
-  MatButtonModule,
-  MatCardModule,
-  MatToolbarModule,
-  MatProgressBarModule,
-  MatIconModule,
-  MatSnackBarModule,
-  MatTabsModule,
-  MatInputModule,
-  MatSidenavModule,
-  MatChipsModule,
-  MatTableModule,
-  MatPaginatorModule,
-  MatTooltipModule,
-} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+ 
+import { MatTableModule } from '@angular/material/table'; 
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatIconModule } from '@angular/material/icon';
+
+ 
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+
+ 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragScrollModule } from 'ngx-drag-scroll';
@@ -63,12 +69,13 @@ import { StatsComponent } from '../stats/stats.component';
     MatCardModule,
     MatChipsModule,
     MatSnackBarModule,
+     MatTableModule,
+    MatPaginatorModule,
+    MatTooltipModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatTooltipModule,
+   
     NgsRevealModule
   ],
   exports: [
