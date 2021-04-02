@@ -16,6 +16,7 @@
 # dependencies
 /node_modules
 .env
+.env.prod
 
 # IDEs and editors
 /.idea
