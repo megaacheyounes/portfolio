@@ -2,9 +2,9 @@
 #ignore my cvs
 /files/*.cv.pdf
 #ignore sidebar background (portrait)
-/src/assets/cc.jpg
+#/src/assets/sidenav.jpg
 #ignore profile picture
-/src/assets/avatar.jpg
+#/src/assets/avatar.jpg
 
 # compiled output
 /dist

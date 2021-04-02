@@ -2,11 +2,6 @@ const path = require("path");
 
 let statController = require("./stats");
 
-const allowedTypes = [
-  "softwareEngineer",
-  //,'webDeveloper','AndroidEngineer'
-];
-
 let showCV = async (req, res) => {
   try {
     await statController.registerStat(req);
@@ -14,12 +9,13 @@ let showCV = async (req, res) => {
     console.log(e);
   }
 
-  const type = req.queryString("type");
-  if (allowedTypes.indexOf(type) == -1) type = allowedTypes[0];
+  var cvs = fs.readdirSync("../../files").filter((fn) => fn.endsWith(".cv.*"));
 
-  const cvName = (type) => `YounesMegaache.${type}.cv.pdf`;
+  console.log("cvs", cvs);
 
-  const cvPath = path.join(__dirname, "../../files/" + cvName(type));
+  // const cvName = (type) => cvs[0];
+
+  // const cvPath = path.join(__dirname, "../../files/" + cvName(type));
   res.sendFile(cvPath);
 };
 

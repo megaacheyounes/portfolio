@@ -10,7 +10,7 @@ export const EXPERIENCES = [
       "htt" +
       "ps://consumer-res.huawei" +
       ".com/etc/designs/huawei-cbg-site/clientlib-campaign-v4/common-v4/images/logo.svg",
-    workplace: "Dubai, UAE",
+    location: "Dubai, UAE",
     website: "htt" + "ps://ww" + "w.huawei" + ".com/en",
     technologies: [
       "Android",
@@ -53,7 +53,7 @@ export const EXPERIENCES = [
       "ps://ww" +
       "w.algebratec" +
       ".com/wp-content/uploads/elementor/thumbs/logo_white-od57qsmy4852r4rrvaglwo96w34i4ivi4nrr2g1c3k.png",
-    workplace: "Constantine Algeria",
+      location: "Constantine Algeria",
     website: "htt" + "p://www." + "algebratec" + ".com",
     technologies: [
       "Laravel/Lumen",
@@ -88,7 +88,7 @@ export const EXPERIENCES = [
     title: "Android Developer",
     company: "Personal",
     companyLogo: "",
-    workplace: "Algeria",
+    location: "Algeria",
     website: "",
     technologies: [
       "Android",

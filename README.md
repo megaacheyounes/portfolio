@@ -23,7 +23,7 @@ Resume (CV) and some assets (profile picture/sidebar background(portrait)) were 
 
 ## Server Side (Nodejs)
 
-Server side code is in folder **server**, include code for download resume (CV), resume must be uploaded to **/server/files** , you can change the name of file in **/server/controllers/cv.js**.
+Server side code is in folder **server**, include code for download resume (CV), resume must be uploaded to **/server/files** , you can change the name of file in **/server/controllers/cv.js**, go to .
 
 Message will be sent to your email using **nodemailer**, set your email address and as environment variable names **CONTACT_EMAIL** which will receive the message, and add an email address and password which will be used to send the message as an email to your **CONTACT_EMAIL**, sending email should be set to env variable names **NODEMAILER_EMAIL** and its password **NODEMAILER_PASSWORD**
 
