@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { BASE_API_URL } from "./config.service";
+import { BASE_API_URL } from "../../shared/services/config.service";
 // resume types
 export const SOFTWARE_ENGINEER = "softwareEngineer",
   WEB = "webDeveloper",
@@ -10,12 +10,12 @@ export const SOFTWARE_ENGINEER = "softwareEngineer",
 })
 export class CvService {
   
-  resumeUrl = (type) => `${BASE_API_URL}/cv?type=${type}`;
+  resumeUrl = ( ) => `${BASE_API_URL}/cv`;
 
   constructor() {}
 
-  showCV(type = SOFTWARE_ENGINEER) {
-    window.open(this.resumeUrl(type), "_blank");
+  showCV(type? ) {
+    window.open(this.resumeUrl(), "_blank");
 
     /*  try {
        this.statsForm.nativeElement.submit();

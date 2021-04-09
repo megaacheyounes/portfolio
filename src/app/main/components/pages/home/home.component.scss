@@ -38,6 +38,15 @@ $bg-url:'../../../../../assets/sidenav.png';
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 100;
 }
 #particles-js {
   width: 100%;

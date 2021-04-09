@@ -7,7 +7,7 @@ import {
   AfterViewInit,
 } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
-import { ConfigService } from "src/app/main/services/config.service";
+import { ConfigService } from "src/app/shared/services/config.service";
 import { CvService } from "src/app/main/services/cv.service";
 
 declare var particlesJS: any;
@@ -28,6 +28,7 @@ export class BioComponent implements OnInit,AfterViewInit {
   ) {}
 
   ngOnInit() {
+
     /*  if (navigator.geolocation) {
        navigator.geolocation.getCurrentPosition(position => {
          this.statsForm.nativeElement.lt.value = (position.coords.latitude);

@@ -1,12 +1,12 @@
 import { Project } from '../models/project';
 
 export const WEBSITES: Project[] = [
-    {
+    /* {
         name: 'Algebratec technologies',
         description: 'The Official business website of Algebrtec Technologies.',
         image: 'assets/websites/al.JPG',
         link: '#Algebratec$'.replace('#', 'http://').replace('$', '.com')
-    },
+    }, */
     {
         name: 'Zedeal Store',
         description: 'An ecommerce website built with wordpress and woocommerce',
@@ -17,23 +17,30 @@ export const WEBSITES: Project[] = [
         name: 'Hot headlines',
         description: 'news website that shows news from most popular news websites',
         image: 'assets/websites/hh.JPG',
-        link: '#hotheadlines.' + 'herokuapp$'.replace('#', 'http://').replace('$', '.com')
+        link: ('#hotheadlines.' + 'herokuapp$').replace('#', 'http://').replace('$', '.com')
     },
     {
         name: 'youtube downloader',
         description: 'download and covert youtube videos and playlists',
         image: 'assets/websites/yq.JPG',
-        link: '#youtubequeue.' + 'herokuapp$'.replace('#', 'http://').replace('$', '.com')
+        link: ('#youtubequeue.' + 'herokuapp$').replace('#', 'http://').replace('$', '.com')
     },
     {
         name: 'fitGirl repacks',
         description: 'advanced search and filtering tool for fitGirl\'s repacks (pc games)',
         image: 'assets/websites/fg.JPG',
-        link: '#fitgirl-repacks.' + 'herokuapp$'.replace('#', 'http://').replace('$', '.com')
+        link: ('#fitgirl-repacks.' + 'herokuapp$').replace('#', 'http://').replace('$', '.com')
     }
 ];
 
 export const APPS: Project[] = [
+    {
+        name: 'eSouq',
+        description: `eSouq is an online marketplace that uses GPS to help you find
+        great deals or let you sell your goods to nearby people quickly.`,
+        image: 'assets/android/esouq.jpg',
+        link: 'https://play.google.com/store/apps/details?id=com.esouq.app'
+    },
     {
         name: 'Golden Souq',
         description: `Quickly sell things you list on Golden souq and find great deals nearby.

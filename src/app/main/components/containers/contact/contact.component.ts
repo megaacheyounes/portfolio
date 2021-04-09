@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBarConfig, MatSnackBar } from '@angular/material/snack-bar';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { SuccessComponent } from 'src/app/shared/components/success/success.component';
-import { BASE_API_URL } from 'src/app/main/services/config.service';
+import { BASE_API_URL } from 'src/app/shared/services/config.service';
 
 
 
@@ -15,7 +15,7 @@ import { BASE_API_URL } from 'src/app/main/services/config.service';
 })
 export class ContactComponent implements OnInit {
  
-  CONTACT_URL = BASE_API_URL + '/contact';
+  CONTACT_URL = BASE_API_URL + '/api/contact';
 
   form: FormGroup = new FormGroup({
     name: new FormControl('',

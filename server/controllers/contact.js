@@ -8,7 +8,7 @@ const getNodemailerTransporter = () => {
       pass: process.env.NODEMAILER_PASSWORD,
     },
   };
-  console.log("nodemailer config: ", NODEMAILER_CONFIG);
+ // console.log("nodemailer config: ", NODEMAILER_CONFIG);
   return nodemailer.createTransport(NODEMAILER_CONFIG);
 };
 
@@ -43,7 +43,16 @@ let sendMessage = (req, res) => {
     to: process.env.CONTACT_EMAIL,
     from: email,
     subject: "[ONLINE RESUME MESSAGE] " + subject,
-    text: message,
+    text: `
+email:
+${email}
+
+subject:
+${subject}
+
+message:
+${message}
+    `,
   };
 //  console.log("  email: ", email);
 

@@ -17,6 +17,7 @@ app.use(cors());
 
 app.use(compression());
 
+
 app.use(sanitize.middleware)
 /** /security */
 app.use(helmet.hidePoweredBy())
@@ -44,34 +45,51 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-//load server on fileChange just like nodeman
-/* var watcher = chokidar.watch('./server')
 
-watcher.on('ready', function () {
-  watcher.on('all', function () {
-    console.log("Clearing /server/ module cache from server")
-    Object.keys(require.cache).forEach(function (id) {
-      if (/[\/\\]server[\/\\]/.test(id)) delete require.cache[id]
-    })
-  })
-}) */
+//app.use(validator());
+
+
 var fs = require('fs');
 const { ConsoleReporter } = require('jasmine');
 app.use('/', routes);
 
-/*app.get('*',(req, res) => {
-  res.sendFile(path.join(__dirname, './dist/index.html'));
+
+/* app.use(async (req, res, next) => {
+  const url = req.url;
+  const shouldNotInclude = ['assets', '.js', '.css', '.jpg', '.png'];
+  let skip = false;
+  shouldNotInclude.forEach(c => {
+    skip = skip || url.includes(c);
+  });
+
+  if (!skip) {
+    await statsController.registerStat(req);
+  }
+
+  next();
 });
-*/
+ */
+
 // Angular DIST output folder
-app.use(express.static(path.join(__dirname, 'dist'), {
+app.use(express.static(path.join(__dirname, './dist'), {
   maxAge: 86400000
 }));
-// Send all other requests to the Angular app
+
+
+app.use('/', routes);
+
+
+app.get('/dashboard', (req, res) => {
+  res.sendFile(path.join(__dirname, './dist/index.html'));
+});
+
+
+
 
 //Set Port
 const port = process.env.PORT || '3000';
 app.set('port', port);
+
 
 const server = http.createServer(app);
 

@@ -1,0 +1,12 @@
+.gr-bg2::before {
+  background: url(/assets/dashboard-bg2.png), rgba(1, 1, 1, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  content: '';
+  transform: rotate(180deg);
+}

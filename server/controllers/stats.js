@@ -2,12 +2,11 @@ const useragent = require("useragent");
 const Stat = require("../models/stat");
 const geocoding = require("reverse-geocoding");
 const dbService = require("../services/dbService");
-
  
-let loadStats = async (req, res) => {
 
+let loadStats = async (req, res) => {
   await dbService.connect();
-ADMIN_PASSWORD
+  //todo: verify token
   let secret = req.queryString("secret");
 
   if (secret == process.env.ADMIN_PASSWORD) {
@@ -34,8 +33,12 @@ let reverseGeocode = async (lat, lon) => {
 };
 
 let registerStat = async (req) => {
-  await dbService.connect();
-
+  if (req.url && req.url.indexOf('stats') !== -1){
+    console.log('no url');
+    return;
+  }
+  const d =  await dbService.connect();
+  console.log('connect d ',d);
   return new Promise(async (resolve, reject) => {
     //  console.log('register stat');
     useragent(true); //keeps useragent up to date with future useragent updates
@@ -54,6 +57,7 @@ let registerStat = async (req) => {
     let ip = req.connection.remoteAddress;
     let language = req.header("accept-language");
     let method = req.method;
+    let route = req.url;
     let date = new Date();
     let stat = new Stat({
       ip,
@@ -68,8 +72,9 @@ let registerStat = async (req) => {
       device,
       method,
     });
-    // console.log('stat', stat);
-    await dbService.saveStats(stat);
+     console.log('stat', stat);
+    const d = await dbService.saveStats(stat);
+    console.log('save state', d) ;
     resolve();
   });
 };
@@ -77,4 +82,4 @@ let registerStat = async (req) => {
 module.exports = {
   loadStats,
   registerStat,
-};
+} ;

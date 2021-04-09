@@ -11,7 +11,6 @@ My personal website (online resume) built on Angular and NodeJS based on the MEA
 
 copy `.env.example` and rename it to `.env`, then add your own information.
 
-- ADMIN_PASSWORD: password to access the analytics page (https://megaache-younes.herokuapp.com/analytics).
 - CONTACT_EMAIL: The email that will the messages sent through the contact form.
 - MONGODB_URL: mongodb url to save statistics which include website view,user agent, location..., must be of the following format: mongodb://**username**:**password**@**host**:**port**/**databaseName**.
 - SENDGRID_API_KEY: SendGrid api key to send messages of the contact form to your email.
@@ -20,7 +19,7 @@ copy `.env.example` and rename it to `.env`, then add your own information.
 
 Information like education, experiences, projects... can be set in the config files at **src/app/main/config**.
 Resume (CV) and some assets (profile picture/sidebar background(portrait)) were not uploaded. see `.gitignore` for more details.
-
+ 
 ## Server Side (Nodejs)
 
 Server side code is in folder **server**, include code for download resume (CV), resume must be uploaded to **/server/files** , you can change the name of file in **/server/controllers/cv.js**, go to .

@@ -53,7 +53,7 @@ export const EXPERIENCES = [
       "ps://ww" +
       "w.algebratec" +
       ".com/wp-content/uploads/elementor/thumbs/logo_white-od57qsmy4852r4rrvaglwo96w34i4ivi4nrr2g1c3k.png",
-      location: "Constantine Algeria",
+      location: "Constantine, Algeria",
     website: "htt" + "p://www." + "algebratec" + ".com",
     technologies: [
       "Laravel/Lumen",

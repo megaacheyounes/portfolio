@@ -34,12 +34,32 @@
          </li>
     </ul>
 
-    <h3 class='reveal'>Technologies:</h3>
+    <h2 class='reveal mar-t-16 no-mar-b'>Projects:</h2>
+
+    <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="16px">
+      <ng-container *ngFor='let a of exp.achievements'>
+        <button mat-button mat-flat-button class='mar-b-16' color='primary' (click)="openLink(a.url)" fxFlex='30%'
+          fxFlex.lt-md='45%' fxFlex.xs='95%' fxFlex.md='45%'>
+          {{a.title}}
+          <mat-icon>open_in_new</mat-icon>
+        </button>
+      </ng-container>
+    </div>
+
+
+    <!--    <mat-chip-list>
+      <mat-chip color='accent' selected *ngFor='let a of exp.achievements' class='reveal'>
+        <a [href]="a.url" class='a-link' target="_blank">{{a.title}}</a>
+      </mat-chip>
+    </mat-chip-list>
+ -->
+    <h2 class='reveal mar-t-16 no-mar-b'>Technologies:</h2>
     <mat-chip-list>
       <mat-chip color='secondary' *ngFor='let tec of exp.technologies' class='reveal'>
         {{tec}}
       </mat-chip>
     </mat-chip-list>
+
 
 
   </mat-card>

@@ -9,6 +9,8 @@
  const SUCCESS_MESSAGE = "email was sent successfully.";
  const FIELD_MISSING = field => `'${field}' is missing!`;
 
+ const URL = '/api/contact';
+
  const mockParams = {
    name: 'jogn doe',
    email: 'johndoe@gmail.com',
@@ -17,9 +19,9 @@
  };
 
 
- describe('/contact', () => {
+ describe('/api/contact', () => {
    it("should send message", (done) => {
-     chai.request(server).post('/contact').send(mockParams).end((err, res) => {
+     chai.request(server).post(URL).send(mockParams).end((err, res) => {
 
        res.should.have.status(200);
        res.body.should.be.a('string');
@@ -34,7 +36,7 @@
      it(`should send error message when ${field} is missing`, (done) => {
 
        const nameShortMockParams = _.omit(mockParams, field);
-       chai.request(server).post('/contact').send(nameShortMockParams).end((err, res) => {
+       chai.request(server).post(URL).send(nameShortMockParams).end((err, res) => {
 
          res.should.have.status(400);
          res.body.should.be.a('string');

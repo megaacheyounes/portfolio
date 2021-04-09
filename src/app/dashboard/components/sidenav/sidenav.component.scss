@@ -1,0 +1,17 @@
+.sub-menu-title {
+  opacity: .5;
+  text-transform: uppercase;
+}
+
+
+
+.bg-img {
+  background-image: url(/assets/dashboard-bg.png), linear-gradient(135deg, rgba(255, 0, 0, 0.29) 0%, #4a0ea2e0 80%);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+.white {
+  color: white;
+}

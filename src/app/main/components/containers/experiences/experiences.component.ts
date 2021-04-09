@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from 'src/app/main/services/config.service';
+import { ConfigService } from 'src/app/shared/services/config.service';
 
 
 @Component({
@@ -17,5 +17,8 @@ export class ExperiencesComponent implements OnInit {
     this.exps = this._configService.experience;
   }
 
+  openLink(link) {
+    window.open(link, '_blank');
+  }
 
 }

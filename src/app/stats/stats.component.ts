@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { HttpClient } from '@angular/common/http';
 import { Stat } from '../main/models/stat';
-import { BASE_API_URL } from '../main/services/config.service';
+import { BASE_API_URL } from '../shared/services/config.service';
 
 @Component({
   selector: 'app-stats',
@@ -12,7 +12,7 @@ import { BASE_API_URL } from '../main/services/config.service';
 export class StatsComponent implements OnInit {
 
   // stats = [];
-  secret = '';
+  secret = 'nopass';
   stats: Stat[];
   statsColumns: String[] = ['date', 'ip', 'method', 'language', 'device', 'location', 'os', 'browser'];
   error;

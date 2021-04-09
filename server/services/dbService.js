@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
+const Stat = require('../models/stat');
 
-const DATABASE_URL = process.env.MONGODB_URL;
 
 const connect = () => {
+  const DATABASE_URL = process.env.MONGODB_URL;
+  console.log("db url: ",DATABASE_URL);
   return mongoose.connect(DATABASE_URL, {
-    useNewUrlParser: true,
+    useNewUrlParser: true, useUnifiedTopology: true
   });
 };
 
@@ -16,10 +18,11 @@ const saveStats = (stat) => {
   new Promise((resolve, reject) => {
     try {
       stat.save((err, doc) => {
-        console.log("err, doc", err, doc);
+        console.log("err = ", err, " ,doc=", doc);
         resolve();
       });
     } catch (e) {
+      console.log('save failed',e);
       resolve();
     }
   });

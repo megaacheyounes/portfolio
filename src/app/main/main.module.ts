@@ -17,7 +17,6 @@ import { StripCardComponent } from './components/presenters/strip-card/strip-car
 import { WebsiteCardComponent } from './components/presenters/website-card/website-card.component';
 import { SharedModule } from '../shared/shared.module';
 import { MainRoutingModule } from './main.routing';
-import { ConfigService } from './services/config.service';
 import { DownloadCVComponent } from './components/containers/download-cv/download-cv.component';
  
 @NgModule({
@@ -46,7 +45,6 @@ import { DownloadCVComponent } from './components/containers/download-cv/downloa
     
   ],
   providers: [
-    ConfigService
   ]
 })
 export class MainModule { }

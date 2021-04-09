@@ -1,0 +1,42 @@
+ <mat-card class='   '>
+   <form class='w-256 mar-16' fxFlex [formGroup]='form' (ngSubmit)='attemptLogin()' fxLayout='column'
+     fxLayoutAlign='center stretch' fxLayoutGap='20px'>
+
+     <h1 fxLayout='row' fxLayoutAlign='center center'>
+       <mat-icon class='pad-r-8'>vpn_key</mat-icon>
+       Login
+     </h1>
+
+     <mat-form-field>
+       <input matInput placeholder="Email" formControlName='email'>
+       <mat-error *ngIf="emailFC.hasError('email') && !emailFC.hasError('required')">
+         Please enter a valid email address
+       </mat-error>
+       <mat-error *ngIf="emailFC.hasError('required')">
+         Email is <strong>required</strong>
+       </mat-error>
+     </mat-form-field>
+
+     <mat-form-field>
+       <input type='password' matInput placeholder="Password" formControlName='password'>
+       <mat-error *ngIf="passwordFC.hasError('minlength') && !passwordFC.hasError('required')">
+         Password too <strong>short</strong>
+       </mat-error>
+       <mat-error *ngIf="passwordFC.hasError('maxlength') && !passwordFC.hasError('required')">
+         Password too <strong>long</strong>
+       </mat-error>
+
+       <mat-error *ngIf="passwordFC.hasError('required')">
+         Password is <strong>required</strong>
+       </mat-error>
+     </mat-form-field>
+
+     <mat-checkbox formControlName='rememberMe'>Keep me logged in</mat-checkbox>
+
+     <button *ngIf='!loading' mat-raised-button color="primary" (click)='attemptLogin()'>Login</button>
+     <mat-spinner *ngIf='loading' [diameter]='40' fxFlexAlign='center'></mat-spinner>
+     <mat-error class='w-256' *ngIf='error'>
+       {{error | displayError}}
+     </mat-error>
+   </form>
+ </mat-card>
