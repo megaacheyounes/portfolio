@@ -67,7 +67,7 @@ app.use(bodyParser.urlencoded({
  */
 
 // Angular DIST output folder
-app.use(express.static(path.join(__dirname, './dist'), {
+app.use(express.static(path.join(__dirname, '/dist'), {
   maxAge: 86400000
 }));
 
@@ -76,7 +76,7 @@ app.use('/', routes);
 
 
 app.get('/dashboard', (req, res) => {
-  res.sendFile(path.join(__dirname, './dist/index.html'));
+  res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
 
 
