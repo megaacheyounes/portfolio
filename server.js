@@ -47,12 +47,8 @@ app.use(bodyParser.urlencoded({
 
 
 //app.use(validator());
-
-
-var fs = require('fs');
-const { ConsoleReporter } = require('jasmine');
-app.use('/', routes);
-
+ 
+   
 
 /* app.use(async (req, res, next) => {
   const url = req.url;
@@ -82,8 +78,6 @@ app.use('/', routes);
 app.get('/dashboard', (req, res) => {
   res.sendFile(path.join(__dirname, './dist/index.html'));
 });
-
-
 
 
 //Set Port

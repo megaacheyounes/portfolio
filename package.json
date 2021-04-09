@@ -90,7 +90,7 @@
     "webpack-bundle-analyzer": "^4.4.0"
   },
   "engines": {
-    "node": "10.16.0"
+    "node": "12.11.1"
   },
   "peerDependencies": {
     "typescript": "3.5.3"
