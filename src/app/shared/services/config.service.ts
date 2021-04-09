@@ -76,7 +76,7 @@ export class ConfigService {
     let y = 0;
 
     if (m > 12) {
-      y = Math.floor(m / 9);
+      y = Math.floor(m / 12);
       m -= y * 12;
     }
 
@@ -88,6 +88,7 @@ export class ConfigService {
     months = (d2.getFullYear() - d1.getFullYear()) * 12;
     months -= d1.getMonth();
     months += d2.getMonth();
+    console.log("mDiff",d1,d2,"=",months);
     return months <= 0 ? 0 : months;
   }
 }

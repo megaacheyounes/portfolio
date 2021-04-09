@@ -18,6 +18,14 @@
       {{ed.title}}
     </h1>
 
+    <h3 class='reveal'>Projects:</h3>
+
+    <ul *ngFor='let project of ed.projects' class='reveal'>
+      <li>
+       {{project}}
+          </li>
+     </ul>
+ 
   </mat-card>
 
 </div>
