@@ -19,13 +19,14 @@ copy `.env.example` and rename it to `.env`, then update the variables inside th
 ## Front End (Angular)
 
 Information like education, experiences, projects... can be set in the config files at `src/app/main/config`.
+
 Assets like profile picture, sidebar background(portrait) can be found in `src/assets`.
 
 ## Server Side (Nodejs)
 
 Server side code can be found in folder `server`
 
-Upload your cv to `/server/files`, the name of the file must with `.cv.pdf`, or update the name of cv in `/server/controllers/cv.js.
+Upload your cv to `/server/files`, the name of the file must with `.cv.pdf`, or update the name of cv in `/server/controllers/cv.js`.
 
 Message from contact from will be sent to your email using **nodemailer**, in `.env` file set the sending and receiving email:
 
