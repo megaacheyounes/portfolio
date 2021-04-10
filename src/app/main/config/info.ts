@@ -5,6 +5,9 @@ const age = () => {
     return Math.floor((new Date().getTime() - Date.parse(BIRTHDAY)) / MILLIS_IN_A_YEAR);
 };
 
+export const LINKED_IN = "https://www.linkedin.com/in/megaache-younes/";
+export const GITHUB = "https://github.com/megaacheyounes";
+
 export const PERSONAL_INFORMATION = [
     {
         icon: 'assets/nopp-web.png',

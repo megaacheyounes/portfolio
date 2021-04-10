@@ -9,6 +9,7 @@ import {
 import { FormGroup, FormControl } from "@angular/forms";
 import { ConfigService } from "src/app/shared/services/config.service";
 import { CvService } from "src/app/main/services/cv.service";
+import { GITHUB, LINKED_IN } from "src/app/main/config/info";
 
 declare var particlesJS: any;
 
@@ -46,6 +47,14 @@ export class BioComponent implements OnInit,AfterViewInit {
   }
   
   ngAfterViewInit() {
+  }
+
+get linkedIn(){
+  return LINKED_IN;
+}
+
+  get github() {
+    return GITHUB;
   }
 
   goToRepo(){

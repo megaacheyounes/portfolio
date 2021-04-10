@@ -9,30 +9,37 @@ My personal website (online resume) built on Angular and NodeJS based on the MEA
 
 ## Env
 
-copy `.env.example` and rename it to `.env`, then add your own information.
+copy `.env.example` and rename it to `.env`, then update the variables inside the file as follow:
 
 - CONTACT_EMAIL: The email that will the messages sent through the contact form.
-- MONGODB_URL: mongodb url to save statistics which include website view,user agent, location..., must be of the following format: mongodb://**username**:**password**@**host**:**port**/**databaseName**.
-- SENDGRID_API_KEY: SendGrid api key to send messages of the contact form to your email.
+- MONGODB_URL: the website will collect basic analytics which include website view,user agent, location..., I use free MongoDB database called Atlas DB, the URL must be of the following format: mongodb://**username**:**password**@**host**:**port**/**databaseName**.
+- NODEMAILER_EMAIL: email address that will be used to send contact form messages to your contact email
+- NODEMAILER_PASSWORD: password for **NODEMAILER_EMAIL**, required to authenticate and send emails
 
 ## Front End (Angular)
 
-Information like education, experiences, projects... can be set in the config files at **src/app/main/config**.
-Resume (CV) and some assets (profile picture/sidebar background(portrait)) were not uploaded. see `.gitignore` for more details.
- 
+Information like education, experiences, projects... can be set in the config files at `src/app/main/config`.
+Assets like profile picture, sidebar background(portrait) can be found in `src/assets`.
+
 ## Server Side (Nodejs)
 
-Server side code is in folder **server**, include code for download resume (CV), resume must be uploaded to **/server/files** , you can change the name of file in **/server/controllers/cv.js**, go to .
+Server side code can be found in folder `server`
 
-Message will be sent to your email using **nodemailer**, set your email address and as environment variable names **CONTACT_EMAIL** which will receive the message, and add an email address and password which will be used to send the message as an email to your **CONTACT_EMAIL**, sending email should be set to env variable names **NODEMAILER_EMAIL** and its password **NODEMAILER_PASSWORD**
+Upload your cv to `/server/files`, the name of the file must with `.cv.pdf`, or update the name of cv in `/server/controllers/cv.js.
+
+Message from contact from will be sent to your email using **nodemailer**, in `.env` file set the sending and receiving email:
+
+- **CONTACT_EMAIL**: which will be the email to receive the messages
+- **NODEMAILER_EMAIL** and **NODEMAILER_PASSWORD**: which will be used to send messages as email to **CONTACT_EMAIL**
 
 ## Tests
 
-To test the API (backend code), run the command: `npm test`, no tests are included for the front-end.
+To test the API (server side code), run the command: `npm test`.
+No tests are included for the front-end.
 
 ## Contributing
 
-All kind of contributions are welcome, feel free to fix bugs, tweak design and improve documentation.
+All kind of contributions are welcome.
 
 ## License
 
