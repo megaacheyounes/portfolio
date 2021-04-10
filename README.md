@@ -26,12 +26,12 @@ Assets like profile picture, sidebar background(portrait) can be found in `src/a
 
 Server side code can be found in folder `server`
 
-Upload your cv to `/server/files`, the name of the file must with `.cv.pdf`, or update the name of cv in `/server/controllers/cv.js`.
+Upload your cv to `/server/files`, the name of the file must end with `.cv.pdf`, otherwise you need to set the name of your CV in `/server/controllers/cv.js`.
 
-Message from contact from will be sent to your email using **nodemailer**, in `.env` file set the sending and receiving email:
+Messages from contact from will be sent to your email using **nodemailer**, in `.env` file set the sending and receiving emails:
 
 - **CONTACT_EMAIL**: which will be the email to receive the messages
-- **NODEMAILER_EMAIL** and **NODEMAILER_PASSWORD**: which will be used to send messages as email to **CONTACT_EMAIL**
+- **NODEMAILER_EMAIL** and **NODEMAILER_PASSWORD**: which will be used to send messages as emails to your **CONTACT_EMAIL**
 
 ## Tests
 
