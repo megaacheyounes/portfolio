@@ -1,4 +1,4 @@
-# [Online Resume](http://megaache-younes.herokuapp.com)
+# [Online Resume](https://younes-megaache.com/)
 
 My personal website (online resume) built on Angular and NodeJS based on the MEAN stack.
 
