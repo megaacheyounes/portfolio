@@ -48,7 +48,7 @@
     "helmet": "^4.4.1",
     "jquery": "^3.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.3",
+    "mongoose": "^5.13.15",
     "ngx-cookie-service": "^11.0.2",
     "ngx-drag-scroll": "^7.4.3",
     "ngx-scrollreveal": "^3.0.0",
